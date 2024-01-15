@@ -1,0 +1,39 @@
+.navbar{
+    background-color: transparent !important;
+}
+
+.vertical-align{
+    position: relative;
+    top: -3.4px;
+    font-size: 14px;
+}
+
+.mylogo{
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.flag{
+    width: 20px;
+    height: 16px;
+}
+
+
+
+a{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+
+@media(max-width: 600px){
+    form{
+        margin-top: 2px;
+        flex-direction: column;
+    }
+}
+
