@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-switcher',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SwitcherComponent implements OnInit {
 
+  @Input() isChecked : boolean = false;
+
   constructor() { }
 
+
   ngOnInit(): void {
+   
+
   }
+
+  
 
 }

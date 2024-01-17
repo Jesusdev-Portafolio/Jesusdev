@@ -1,6 +1,66 @@
-.background-color{
-    //background: linear-gradient(rgba(14, 117, 221), 80%, lightblue);
-    background: white;
+
+//al fin consegui hacer lo de cambio de color del gradient aunque ni yo mismo lo entiendo bien :D
+
+@property --myColor1Light {
+    syntax: '<color>';
+    initial-value: rgba(255,255,255);
+    inherits: false;
+  }
+  
+  @property --myColor2Light {
+    syntax: '<color>';
+    initial-value: rgba(33, 150, 243);
+    inherits: false;
+  }
+
+  @property --myColor1Dark {
+    syntax: '<color>';
+    initial-value: rgba(65,65,65);
+    inherits: false;
+  }
+  
+  @property --myColor2Dark {
+    syntax: '<color>';
+    initial-value: rgba(29,242,114);
+    inherits: false;
+  }
+
+.kk{
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    z-index:-1;
+}
+
+.light .kk {
+    background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
+    transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
+  }
+
+.light .kk{
+    --myColor1Dark: var(--myColor1Light);
+    --myColor2Dark: var(--myColor2Light);
+}
+
+.dark  .kk {
+    background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
+    transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
+  }
+
+.dark  .kk{
+    --myColor1Light: var(--myColor1Dark);
+    --myColor2Light: var(--myColor2Dark);
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+  
+
+
+/*.background-color{
+    background: linear-gradient(to bottom right, var(--myColor1),90%, var(--myColor2));
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -8,17 +68,17 @@
     position: absolute;
     z-index: -1;
     top: 0;
-
-}
+  
+}*/
 
 .content-height{
     height: 85vh;
 }
 
 .my-img{
-    width: 500px;
-    filter: drop-shadow(0 -6mm 4mm #2196F3);
-    filter: drop-shadow(0 0 2.35rem #2196F3);
+    width: 270px;   
+   filter: drop-shadow(0 0 .3rem var(--color-secundario));
+   margin-right: -65px;
 }
 
 .custom-width{
@@ -48,8 +108,3 @@
 
 
 
-@media(min-width:1300px){
-    .custom-margin{
-        margin-left: 40px;
-    }
-}

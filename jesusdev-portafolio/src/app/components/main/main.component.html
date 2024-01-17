@@ -1,28 +1,37 @@
+<div *ngIf="(theme$ | async) !== null ">
+    <div #wtf class="{{(theme$ | async).themeToAdd}}">
+        <div class="kk"></div>
+    </div>
+</div>
+
+
+
+
 <span class="background-color"></span>
 <div class="container">
     <div class="row content-height">
-        <div class="col-md-4 d-flex justify-content-start align-items-center">
-            <img  class="custom-margin my-img" src="../../../assets/prueba.png" alt="modelo prueba">
+        <div class="col-md-4 d-flex align-items-center justify-content-end">
+            <img  class="my-img" src="../../../assets/gimp_img_portfolio.png" alt="imagen_perfil">
         </div>
+
         <div class="col-8 d-flex justify-content-center align-items-start mb-5  flex-column">
             <div class="custom-margin custom-width mb-5">
                 <div class="custom-height">
                     <ngx-typed-js 
-                    [strings]="mainText"
-                    [cursorColor]="'#2196F3'"
-                    [shuffle]="false"
-                    [contentType]="'html'"
-                    [typeSpeed]="65"
-                    (completed)="showButtons = true"
+                        [strings]="mainText"
+                        [cursorColor]="'var(--color-principal)'"
+                        [shuffle]="false"
+                        [contentType]="'html'"
+                        [typeSpeed]="45"
+                        (completed)="showButtons = true"
                     >
-                    <span class="main-title color-azul me-3">></span><span class="typing color-negro main-title"></span>
+                    <span class="main-title color-principal me-3">></span><span class="typing color-negro main-title"></span>
                   </ngx-typed-js>
                 </div>
                 
-              
                 <div [ngClass]="{'oculto': !showButtons, 'visible': showButtons}" class="d-flex justify-content-center text-center mt-2">
-                    <button class="btn btn-primary mx-2"> Descargar CV</button>
-                    <button class="btn btn-success mx-2">Contáctame</button>
+                    <button class="btn btn-primary mx-2 btn-principal"> Descargar CV</button>
+                    <button class="btn btn-success mx-2 btn-secundario">Contáctame</button>
                 </div>
             </div>
             

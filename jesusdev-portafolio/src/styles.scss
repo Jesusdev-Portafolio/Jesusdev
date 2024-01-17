@@ -1,29 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
 
-.color-azul{
-    color:  #2196F3;
+body * {
+  
+    transition: background-color .5s linear;
+    transition: color .5s linear;
+   
+  }
+
+
+
+.light{
+    //colores
+    --color-fondo: rgba(255,255,255); //general paginas background
+    --color-principal: rgba(33, 150, 243, 1); // detalles y cosas para sobresalir
+    --color-secundario: rgba(65,65,65,1); // letras
+
+    //botones
+    --btn-primario-color:rgba(33, 150, 243,.9);
+    --btn-primario-hover:rgba(33, 150, 243,1);
+    --btn-secundario-color:rgba(65,65,65,.9);
+    --btn-secundario-hover:rgba(65,65,65,1);
+    
+    //side-bar
+    --side-bar-background-color: rgba(65,65,65,.8);
+    --side-bar-box-shadow: 0 20px 35px rgba(0,0,0,.1);
+
+    --myColor1w: rgba(255,255,255);
+    
 }
 
-.color-blanco{
-    color: #fff;
+
+.dark{
+    --color-fondo: rgba(65,65,65,1);
+    --color-principal: rgba(29,242,114);
+    --color-secundario: rgba(255,255,255);
+
+     //botones
+     --btn-primario-color:rgba(29,242,114,.9); 
+     --btn-primario-hover:rgba(29,242,114,1);
+     --btn-secundario-color:rgba(255,255,255,.1);
+     --btn-secundario-hover:rgba(255,255,255,.2);
+
+    //side-bar
+    --side-bar-background-color: rgba(255,255,255,.1);
+    --side-bar-box-shadow: 0 20px 35px rgba(255,255,255,.1);
+
+
 }
 
-.color-verde{
-    color:rgba(29,242,114)
+
+.color-fondo{
+    color: var(--color-fondo)
 }
 
-.color-verde-opaco{
-    color:rgba(29,242,114,1)
+.color-principal{
+    color: var(--color-principal);
 }
 
-.color-negro{
-    color: rgba(65,65,65,1);
+.color-secundario{
+    color: var(--color-secundario);
 }
 
-.btn-primary{
-    background-color: #2196F3 ;
+
+
+.btn-principal{
+    background-color: var(--btn-primario-color);
+    color: var(--color-fondo);
+    border: 1px solid var(--color-principal);
+    transition: background-color .7s linear;
+   
 }
 
-.btn-success{
-    background-color: rgba(65,65,65,1) ;
+.btn-principal:hover{
+    background-color: var(--btn-primario-hover);
+    color: var(--color-fondo);
+    border: 1px solid var(--color-principal);
 }
+
+.btn-secundario{
+    background-color: var(--btn-secundario-color);
+    transition: background-color .7s linear;
+}
+
+.btn-secundario:hover{
+    background-color: var(--btn-secundario-hover);
+}
+
+
+
