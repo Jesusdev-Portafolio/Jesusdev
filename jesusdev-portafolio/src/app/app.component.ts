@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ThemeService } from './services/theme.service';
+import { LanguajeService } from './services/languaje.service';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +15,11 @@ export class AppComponent implements OnInit {
 
   title = 'jesusdev-portafolio';
 
-  constructor(private renderer: Renderer2, private themeService: ThemeService){}
+  constructor(private renderer: Renderer2, private themeService: ThemeService, private languajeService: LanguajeService){}
   
   ngOnInit(): void {
     this.getUserTheme();
+    this.getUserLanguaje();
   }
 
   getUserTheme(){
@@ -32,6 +34,10 @@ export class AppComponent implements OnInit {
     
 
 
+  }
+
+  getUserLanguaje(){
+    this.languajeService.getLanguajeForUser();
   }
 
 }

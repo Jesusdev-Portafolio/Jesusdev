@@ -4,8 +4,8 @@ import { HomeComponent } from './Pages/home/home.component';
 
 const routes: Routes = [
   
-  {path:'main', component: HomeComponent},
-  {path:'**', redirectTo: 'main', pathMatch: 'full'} // ojo con esto
+  {path:'', component: HomeComponent},
+  {path:'**', redirectTo: '', pathMatch: 'full'} // ojo con esto
 
 ];
 

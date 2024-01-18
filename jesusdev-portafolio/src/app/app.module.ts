@@ -38,7 +38,6 @@ import { TranslocoRootModule } from './transloco-root.module'
     NgxTypedJsModule,
     HttpClientModule,
     TranslocoRootModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

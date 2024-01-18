@@ -1,1 +1,25 @@
-{}
+{
+    "main": {
+        "downloadCvBtn" : "Download CV",
+        "contactBtn" : "Contac Me"
+    },
+    "navBar": {
+        "home": "Welcome",
+        "about": "About Me",
+        "projects": "Projects",
+        "studies": "Studies",
+        "contact": "Contact Me"
+    },
+
+    "navigation" : {
+        "home": "Welcome",
+        "about": "About_Me",
+        "projects": "Projects",
+        "studies": "Studies",
+        "contact": "Contact_Me"
+    },
+
+
+    "hola" : "hello from transloco"
+
+}

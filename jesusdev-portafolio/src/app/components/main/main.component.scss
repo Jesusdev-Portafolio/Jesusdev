@@ -25,7 +25,7 @@
     inherits: false;
   }
 
-.kk{
+.background{
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -35,22 +35,22 @@
     z-index:-1;
 }
 
-.light .kk {
+.light .background {
     background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
     transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
   }
 
-.light .kk{
+.light .background{
     --myColor1Dark: var(--myColor1Light);
     --myColor2Dark: var(--myColor2Light);
 }
 
-.dark  .kk {
+.dark  .background {
     background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
     transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
   }
 
-.dark  .kk{
+.dark  .background{
     --myColor1Light: var(--myColor1Dark);
     --myColor2Light: var(--myColor2Dark);
 }

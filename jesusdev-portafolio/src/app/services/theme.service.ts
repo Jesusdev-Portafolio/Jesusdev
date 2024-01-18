@@ -15,13 +15,13 @@ export class ThemeService {
 
   getThemeForUser(){
     let theme = localStorage.getItem('theme');
-    if (theme === null){
-        console.log("ThemeService: no hay tema establecido, estableciendo tema por defecto");
+    if (theme === null || theme !== "light" && theme !== "dark"){
+        console.log("ThemeService: no hay tema establecido, estableciendo tema por defecto: " + this.tema.themeToAdd);
         this.themeSource.next(this.tema);
         return;
     };
 
-    let tema = new Theme( this.chooseOpositeTheme(theme), theme);
+    console.log("ThemeService: estableciendo tema de usuario: " + theme);
     this.themeSource.next(new Theme( this.chooseOpositeTheme(theme), theme))
   }
 

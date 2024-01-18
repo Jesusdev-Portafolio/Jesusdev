@@ -1,4 +1,4 @@
-<header class="navbar">
+<header class="navbar" id="{{'navigation.home' | transloco}}">
     <div class="container-fluid">
       <a class="navbar-brand mylogo color-secundario"><span class="color-principal">&lt;</span>Jesus<span class="color-principal">Dev&#47;&gt;</span></a>
       <form class="d-flex">
@@ -11,7 +11,9 @@
         </div>
         <div class="d-flex mx-2">
             <div class="vertical-align"><img class="flag" src="../../../assets/flags/spain_flag.jpg" alt="spanish"></div>
-            <app-switcher></app-switcher>
+            <div (change)="toogleLanguaje()">
+              <app-switcher [isChecked]="!isSpanishLanguaje"></app-switcher>
+            </div>
             <div class="vertical-align"><img class="flag" src="../../../assets/flags/UK_flag.png" alt="english"></div>
         </div>
       </form>

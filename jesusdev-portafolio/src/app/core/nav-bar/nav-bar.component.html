@@ -1,40 +1,39 @@
     <nav class="my-side-bar">
         <ul>
-            
             <app-side-bar-item
                 [icon]="'fa fa-home'"
-                [label]="'Inicio'"
-                [link]="'#'"
+                label="{{'navBar.home' | transloco}}"
+                link="#{{'navigation.home' | transloco}}"
                 [isFirst]="true"
             >
             </app-side-bar-item>
     
             <app-side-bar-item
                 [icon]="'fa fa-user'"
-                [label]="'Sobre Mi'"
-                [link]="'#'"
+                label="{{'navBar.about' | transloco}}"
+                link="#{{'navigation.about' | transloco}}"
             >
             </app-side-bar-item>
     
             <app-side-bar-item
                 [icon]="'fa fa-briefcase'"
-                [label]="'Proyectos'"
-                [link]="'#'"
+                label="{{'navBar.projects' | transloco}}"
+                link="#{{'navigation.projects' | transloco}}"
             >
     
             </app-side-bar-item>
     
             <app-side-bar-item
                 [icon]="'fa fa-graduation-cap'"
-                [label]="'Certificados'"
-                [link]="'#'"
+                label="{{'navBar.studies' | transloco}}"
+                link="#{{'navigation.studies' | transloco}}"
             >
             </app-side-bar-item>
     
             <app-side-bar-item
                 [icon]="'fa fa-phone'"
-                [label]="'Contacto'"
-                [link]="'#'"
+                label="{{'navBar.contact' | transloco}}"
+                link="#{{'navigation.contact' | transloco}}"
                 [isLast]="true"
             >
         </app-side-bar-item>
