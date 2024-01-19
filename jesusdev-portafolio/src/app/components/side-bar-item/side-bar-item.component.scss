@@ -27,6 +27,15 @@ li:hover .fas{
         filter: drop-shadow(0 0 1px var(--color-fondo));  
 }
 
+.active{
+    background: var(--color-secundario);
+}
+
+.active .fas{
+    filter: drop-shadow(0 0 1px var(--color-fondo));  
+}
+
+
 
 .first{
     border-top-right-radius: 30px;

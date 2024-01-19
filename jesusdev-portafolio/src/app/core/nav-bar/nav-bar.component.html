@@ -1,44 +1,51 @@
-    <nav class="my-side-bar">
-        <ul>
+    <nav id="navbar" class="my-side-bar">
+        <ul> 
             <app-side-bar-item
-                [icon]="'fa fa-home'"
-                label="{{'navBar.home' | transloco}}"
-                link="#{{'navigation.home' | transloco}}"
-                [isFirst]="true"
+                    [icon]="'fa fa-home'"
+                    label="{{'navBar.home' | transloco}}"
+                    link="{{'navigation.home' | transloco}}"
+                    [isFirst]="true"
+                    customSpyId="home"
+                 >
+            </app-side-bar-item>
+            
+            <app-side-bar-item
+                    [icon]="'fa fa-user'"
+                    label="{{'navBar.about' | transloco}}"
+                    link="{{'navigation.about' | transloco}}"
+                    customSpyId="about"
             >
             </app-side-bar-item>
-    
-            <app-side-bar-item
-                [icon]="'fa fa-user'"
-                label="{{'navBar.about' | transloco}}"
-                link="#{{'navigation.about' | transloco}}"
-            >
-            </app-side-bar-item>
-    
+
+                   
             <app-side-bar-item
                 [icon]="'fa fa-briefcase'"
                 label="{{'navBar.projects' | transloco}}"
-                link="#{{'navigation.projects' | transloco}}"
+                link="{{'navigation.projects' | transloco}}"
+                customSpyId="projects"
             >
-    
             </app-side-bar-item>
     
             <app-side-bar-item
                 [icon]="'fa fa-graduation-cap'"
                 label="{{'navBar.studies' | transloco}}"
-                link="#{{'navigation.studies' | transloco}}"
+                link="{{'navigation.studies' | transloco}}"
+                customSpyId="studies"
             >
             </app-side-bar-item>
     
             <app-side-bar-item
                 [icon]="'fa fa-phone'"
                 label="{{'navBar.contact' | transloco}}"
-                link="#{{'navigation.contact' | transloco}}"
+                link="{{'navigation.contact' | transloco}}"
                 [isLast]="true"
+                customSpyId="contact"
             >
-        </app-side-bar-item>
-            
+            </app-side-bar-item>
         </ul>    
     </nav>
+
+
+  
 
 

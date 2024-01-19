@@ -13,9 +13,10 @@ import { SwitcherComponent } from './shared/switcher/switcher.component'
 import { NgxTypedJsModule } from 'node_modules/ngx-typed-js';
 import { HeaderComponent } from './core/header/header.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component'
-import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module'
+import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.component';
+import { SpyDirective, SpyTargetDirective, SpyTargetContainerDirective } from '@thejlifex/ngx-scroll-spy';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { TranslocoRootModule } from './transloco-root.module'
     SwitcherComponent,
     HeaderComponent,
     NavBarComponent,
-    SideBarItemComponent
+    SideBarItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +38,13 @@ import { TranslocoRootModule } from './transloco-root.module'
     BrowserAnimationsModule,
     NgxTypedJsModule,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    SpyDirective,
+    SpyTargetDirective,
+    SpyTargetContainerDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

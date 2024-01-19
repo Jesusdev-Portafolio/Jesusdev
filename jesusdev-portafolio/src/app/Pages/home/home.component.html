@@ -1,19 +1,64 @@
-<section class="main-section"> <!-- el de este esta en el header para que llegue arriba del todo -->
-    <app-main></app-main>
-</section>
+<div>
+    <div
+        spyTarget [spyTargetId]="'home'"
+        id="{{'navigation.home' | transloco}}" 
+        class="normal-section"> <!-- el de este esta en el header para que llegue arriba del todo NOOOOOOO poner el header absoluto y ya este clase normalsection-->
+        <app-main></app-main>
+    </div>
+    
+    <div
+        spyTarget [spyTargetId]="'about'" 
+        id="{{'navigation.about' | transloco}}" class="normal-section">
+        <app-about></app-about>
+    </div>
+    
+    <div
+        spyTarget [spyTargetId]="'projects'" 
+         id="{{'navigation.projects' | transloco}}" class="normal-section">
+        <app-projects></app-projects>
+    </div>
+    
+    <div  
+        spyTarget [spyTargetId]="'studies'" 
+        id="{{'navigation.studies' | transloco}}" class="normal-section">
+        <app-certificates></app-certificates>
+    </div>
+    
+    <div 
+        spyTarget [spyTargetId]="'contact'" 
+        id="{{'navigation.contact' | transloco}}" class="normal-section">
+        <app-contact></app-contact>
+    </div>
 
-<section id="{{'navigation.about' | transloco}}" class="normal-section">
-    <app-about></app-about>
-</section>
+</div>
 
-<section  id="{{'navigation.projects' | transloco}}" class="normal-section">
-    <app-projects></app-projects>
-</section>
+<!--<div
+spyTarget [spyTargetId]="'navigation.home' | transloco"
+id="{{'navigation.home' | transloco}}" 
+class="normal-section"> 
+<app-main></app-main>
+</div>
 
-<section  id="{{'navigation.studies' | transloco}}" class="normal-section">
-    <app-certificates></app-certificates>
-</section>
+<div
+spyTarget [spyTargetId]="'navigation.about' | transloco" 
+id="{{'navigation.about' | transloco}}" class="normal-section">
+<app-about></app-about>
+</div>
 
-<section  id="{{'navigation.contact' | transloco}}" class="normal-section">
-    <app-contact></app-contact>
-</section>
+<div
+spyTarget [spyTargetId]="'navigation.projects' | transloco" 
+ id="{{'navigation.projects' | transloco}}" class="normal-section">
+<app-projects></app-projects>
+</div>
+
+<div  
+spyTarget [spyTargetId]="'navigation.studies' | transloco" 
+id="{{'navigation.studies' | transloco}}" class="normal-section">
+<app-certificates></app-certificates>
+</div>
+
+<div 
+spyTarget [spyTargetId]="'navigation.contact' | transloco" 
+id="{{'navigation.contact' | transloco}}" class="normal-section">
+<app-contact></app-contact>
+</div>-->

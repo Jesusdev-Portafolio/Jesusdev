@@ -1,6 +1,9 @@
-<li [ngClass]="isFirst ? 'first' : isLast ? 'last' : ''">
-    <a href="{{link}}">
-        <i class=" fas {{icon}}" aria-hidden="true  "></i>
+<li [ngClass]="[ isFirst ? 'first' : isLast ? 'last' : '' ]"
+>
+    <a
+     spy [spyTargetId]="customSpyId" 
+     href="#{{link}}">
+        <i class=" fas {{icon}}" aria-hidden="true"></i>
         <span class="my-side-bar-item">{{label}}</span>
     </a>
 </li>
