@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { Observable } from 'rxjs';
+import { Theme } from 'src/app/core/models/theme';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +11,14 @@ import { TranslocoService } from '@ngneat/transloco';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private translocoService: TranslocoService) { }
+  theme$ : Observable<Theme>;
+  @ViewChild('backgroundThemeAbout') backgroundThemeAbout!: ElementRef;
 
-  ngOnInit(): void {}
+  constructor(private translocoService: TranslocoService, private themeService: ThemeService) { }
+
+  ngOnInit(): void {
+    this.theme$ = this.themeService.theme$;
+  }
 
 
 }

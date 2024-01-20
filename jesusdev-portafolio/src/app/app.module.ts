@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module'
 import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.component';
 import { SpyDirective, SpyTargetDirective, SpyTargetContainerDirective } from '@thejlifex/ngx-scroll-spy';
+import { SwipperComponent } from './shared/swipper/swipper.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SpyDirective, SpyTargetDirective, SpyTargetContainerDirective } from '@
     HeaderComponent,
     NavBarComponent,
     SideBarItemComponent,
+    SwipperComponent,
   ],
   imports: [
     BrowserModule,

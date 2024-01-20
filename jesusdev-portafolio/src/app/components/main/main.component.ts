@@ -11,7 +11,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class MainComponent implements OnInit {
 
-   @ViewChild('wtf') wtf!: ElementRef;
+   @ViewChild('backgroundThemeMain') backgroundThemeMain!: ElementRef;
    theme$ : Observable<Theme>;
 
    private mainTextEs = ["<span class='color-secundario'>Soy</span> <span class='color-principal'>Jesus</span> <span class='color-secundario'>y soy</span> <span class='color-principal' style='margin-left: 46px !important'>Desarrollador</span> <span class='color-secundario'>web</span>"];
@@ -33,10 +33,10 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.theme$ = this.themeService.theme$;
-    this.cambiarIdiomaMainText();
+    this.cambiarIdiomaMainTextYCV();
   }
 
-  cambiarIdiomaMainText(){ //esto es para cuando cambia el lenguaje un observable
+  cambiarIdiomaMainTextYCV(){ //esto es para cuando cambia el lenguaje un observable
     this.transLocoService.langChanges$.subscribe({
       next: (activeLang) => {
         this.mainText = (activeLang === 'es') ? this.mainTextEs : this.mainTextEn;

@@ -1,0 +1,90 @@
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: transparent;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: 25s slide infinite linear;
+
+  }
+  .logo-slide-container{
+    display: inline-block;
+  }
+
+  .logo-slide-container{
+    height: 100px;
+    width: 100px;
+  }
+
+  .logos-slide img {
+    height: 60px;
+    margin: 30px 30px 0 30px;
+    width: 60px;
+  }
+
+
+
+
+  //////////
+  .swiper-decoration{
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-decoration > .key-decoration{
+    font-size: 70px;
+    color: var(--color-principal);
+  }
+
+  .background-hover{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin: 20px 30px 0 20px;
+    margin-left: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    border-radius: 20px;
+    background-color: var(--color-secundario);
+
+  }
+
+  .hover-text{
+    color: var(--color-fondo);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+   .logo-slide-container:hover > .background-hover{
+    visibility: visible;
+    opacity: .8;
+    margin-top: -70px;   
+  }
+
+
+
+  
+
+
+
+
