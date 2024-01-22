@@ -5,20 +5,23 @@
 </div>
 
 <div class="container">
-    <div class="row my-container-height justify-content-center align-items-center">
-        <div class="col-md-6 col-sm-12">
-            <p class="about-text">
-                Soy un apasionado desarrollador junior con experiencia en tecnologías orientadas al desarrollo web, como son HTML, CSS, Angular y ASP.NET. Aunque mi trayectoria es aún breve, he cultivado una sólida comprensión de estos lenguajes y frameworks. Mi enfoque se centra en aprender de manera continua y enfrentar nuevos desafíos. Estoy emocionado por crecer en la industria, colaborar en proyectos inspiradores y contribuir al desarrollo de soluciones web innovadoras.
-            </p>
-        </div>
-        <div class="col-md-6 col-sm-12 justify-content-center align-items-center">  
-            <div class="d-flex justify-content-center align-items-center about-title ">
-                <h1> Herramientas </h1> 
+    <ng-container *transloco="let t" >
+        <div class="row my-container-height justify-content-center align-items-center">
+            <div class="col-md-6 col-sm-12">
+                <p class="about-text">
+                    {{t('about.aboutText')}}
+                </p>
             </div>
-            <div class="swipper-about">
-                <app-swipper></app-swipper>
+            <div class="col-md-6 col-sm-12 justify-content-center align-items-center">  
+                <div class="d-flex justify-content-center align-items-center about-title ">
+                    <h1> {{t('about.tools')}} </h1> 
+                </div>
+                <div class="swipper-about" *ngIf="logos.length > 0">
+                    <app-swipper
+                        [logos]="logos"></app-swipper>
+                </div>
             </div>
         </div>
-    </div>
-        
+    </ng-container>
+          
 </div>

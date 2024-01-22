@@ -17,6 +17,10 @@
         "studies": "Estudios",
         "contact": "Contacto"
     },
+    "about":{
+        "aboutText":"Soy un apasionado desarrollador junior con experiencia en tecnologías orientadas al desarrollo web, como son HTML, CSS, Angular y ASP.NET. Aunque mi trayectoria es aún breve, he cultivado una sólida comprensión de estos lenguajes y frameworks. Mi enfoque se centra en aprender de manera continua y enfrentar nuevos desafíos. Estoy emocionado por crecer en la industria, colaborar en proyectos inspiradores y contribuir al desarrollo de soluciones web innovadoras.",
+        "tools":"Herramientas"
+    },
 
     "hola" : "hola desde transloco"
 }

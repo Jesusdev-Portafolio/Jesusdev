@@ -8,7 +8,7 @@ import { LanguajeService } from './services/languaje.service';
   styleUrls: ['./app.component.scss']
 })
 
-    //TODO:crear un theme switch service y suscribirse y con eso maniobrar a ver si lo consigo
+    //TODO:usar animate para transiciones
 
     
 export class AppComponent implements OnInit {

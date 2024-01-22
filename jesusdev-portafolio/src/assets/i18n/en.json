@@ -10,13 +10,16 @@
         "studies": "Studies",
         "contact": "Contact Me"
     },
-
-    "navigation" : {
+    "navigation" : { 
         "home": "Welcome",
         "about": "About_Me",
         "projects": "Projects",
         "studies": "Studies",
         "contact": "Contact_Me"
+    },
+    "about":{
+        "aboutText":"I am a passionate junior developer with experience in web development oriented technologies such as HTML, CSS, Angular and ASP.NET. Although my background is still short, I have cultivated a solid understanding of these languages and frameworks. My focus is on continuous learning and meeting new challenges. I am excited to grow in the industry, collaborate on inspiring projects and contribute to the development of innovative web solutions",
+        "tools":"Tools"
     },
 
 
