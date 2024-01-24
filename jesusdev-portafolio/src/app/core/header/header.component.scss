@@ -1,4 +1,5 @@
 .navbar{
+    top: 0;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -35,6 +36,10 @@ a{
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 10px;
+}
+
+a:active, a:visited  {
+    color: var(--color-secundario);
 }
 
 

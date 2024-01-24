@@ -1,6 +1,6 @@
 <header class="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand mylogo color-secundario"><span class="color-principal">&lt;</span>Jesus<span class="color-principal">Dev&#47;&gt;</span></a>
+      <a routerLink="/" class="navbar-brand mylogo color-secundario"><span class="color-principal">&lt;</span>Jesus<span class="color-principal">Dev&#47;&gt;</span></a>
       <form class="d-flex">
         <div class="d-flex mx-2">
             <i class="fa fa-sun-o color-secundario" aria-hidden="true"></i>
@@ -10,11 +10,11 @@
             <i class="fa fa-moon-o color-secundario" aria-hidden="true"></i>
         </div>
         <div class="d-flex mx-2">
-            <div class="vertical-align"><img class="flag" src="../../../assets/flags/spain_flag.jpg" alt="spanish"></div>
+            <div class="vertical-align"><img class="flag" src="/assets/flags/spain_flag.jpg" alt="spanish"></div>
             <div (change)="toogleLanguaje()">
               <app-switcher [isChecked]="!isSpanishLanguaje"></app-switcher>
             </div>
-            <div class="vertical-align"><img class="flag" src="../../../assets/flags/UK_flag.png" alt="english"></div>
+            <div class="vertical-align"><img class="flag" src="/assets/flags/UK_flag.png" alt="english"></div>
         </div>
       </form>
     </div>

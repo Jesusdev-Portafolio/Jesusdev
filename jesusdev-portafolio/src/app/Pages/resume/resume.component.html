@@ -1,0 +1,35 @@
+<div *ngIf="(theme$ | async) !== null ">
+    <div  class="{{(theme$ | async).themeToAdd}}">
+        <div class="background"></div>
+    </div>
+</div>
+
+<div *ngIf="(lang$ | async)">
+    <div *ngIf="(lang$ | async) === 'es'">
+        <object class="cv" data="/assets/cv/Jesus_Noguera_CV_es.pdf" type="application/pdf">
+            <p class="fallback-no-pdf-plugin"> Su navegador no tiene un plugin PDF, por favor descargar directamente
+                 <a href="/assets/cv/Jesus_Noguera_CV_en.pdf"> aqui </a>
+            </p>
+            <div class="cv-btn-container">
+                <button class="btn btn-primary" routerLink="/">Volver</button>
+            </div>
+        </object>
+        
+    </div>
+    <div *ngIf="(lang$ | async) === 'en'">
+        <object class="cv" data="/assets/cv/Jesus_Noguera_CV_en.pdf" type="application/pdf">
+            <p class="fallback-no-pdf-plugin">Your web browser doesn't have a PDF plugin.
+                Instead you can <a href="/assets/cv/Jesus_Noguera_CV_en.pdf">click here to
+                download the PDF file.</a>
+            </p>
+            <div class="cv-btn-container">
+                <button class="btn btn-primary" routerLink="/">Go Back</button>
+            </div>
+        </object>
+    </div>   
+</div>
+
+
+
+
+

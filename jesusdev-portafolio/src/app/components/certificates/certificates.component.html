@@ -1,1 +1,21 @@
-<p>certificates works!</p>
+<div *ngIf="(theme$ | async) !== null ">
+    <div #backgroundThemeAbout class="{{(theme$ | async).themeToAdd}}">
+        <div class="background"></div>
+    </div>
+</div>
+
+<div class="container custom-height  d-flex justify-content-center align-items-center">
+    <div *ngIf="certificates.length > 0">
+        <div class="certificates">
+            <div *ngFor="let cert of certificates">
+                <app-certificate-item
+                    [description]="cert.label1"
+                    [link]="cert.link"
+                    [imgSource]="cert.imgSource"
+                ></app-certificate-item>
+            </div>
+        </div>    
+    </div>
+   
+</div>
+

@@ -1,10 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 body * {
   
     transition: background-color .5s linear;
     transition: color .5s linear;
    
+  }
+
+  *{
+
+    --myColor1Light : rgba(255,255,255);
+    --myColor2Light : rgba(33, 150, 243);
+  
+    --myColor1Dark : rgba(65,65,65);
+    --myColor2Dark : rgba(29,242,114);
+  
   }
 
 

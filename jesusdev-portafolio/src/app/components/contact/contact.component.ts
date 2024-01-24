@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Theme } from 'src/app/core/models/theme';
+import { ThemeService } from 'src/app/services/theme.service';
 
 
 @Component({
@@ -8,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  theme$: Observable<Theme>;
+  constructor( private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.theme$ = this.themeService.theme$;
   }
 
 }

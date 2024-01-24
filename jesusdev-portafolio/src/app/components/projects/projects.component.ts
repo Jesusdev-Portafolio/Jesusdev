@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Theme } from 'src/app/core/models/theme';
+import { ThemeService } from 'src/app/services/theme.service';
+
+type NewType = Theme;
 
 @Component({
   selector: 'app-projects',
@@ -6,10 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  theme$: Observable<Theme>;
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.theme$ = this.themeService.theme$;
+
   }
 
 }

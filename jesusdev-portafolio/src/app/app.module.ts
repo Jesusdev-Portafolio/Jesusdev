@@ -18,6 +18,8 @@ import { TranslocoRootModule } from './transloco-root.module'
 import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.component';
 import { SpyDirective, SpyTargetDirective, SpyTargetContainerDirective } from '@thejlifex/ngx-scroll-spy';
 import { SwipperComponent } from './shared/swipper/swipper.component';
+import { ResumeComponent } from './Pages/resume/resume.component';
+import { CertificateItemComponent } from './components/certificate-item/certificate-item.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { SwipperComponent } from './shared/swipper/swipper.component';
     NavBarComponent,
     SideBarItemComponent,
     SwipperComponent,
+    ResumeComponent,
+    CertificateItemComponent,
   ],
   imports: [
     BrowserModule,

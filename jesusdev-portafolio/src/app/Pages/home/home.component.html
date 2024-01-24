@@ -1,3 +1,5 @@
+
+<app-nav-bar></app-nav-bar>
 <div>
     <div
         spyTarget [spyTargetId]="'home'"
@@ -11,6 +13,14 @@
         id="{{'navigation.about' | transloco}}" class="normal-section">
         <app-about></app-about>
     </div>
+
+    <!-- esa clase esta para acomodar el color del backgroun con los certificados que es un contenido dinamico y con eso lo apaño :D -->
+    <div  
+        spyTarget [spyTargetId]="'studies'" 
+        id="{{'navigation.studies' | transloco}}" class="normal-section background-color-base"
+         >    
+        <app-certificates></app-certificates>
+    </div>
     
     <div
         spyTarget [spyTargetId]="'projects'" 
@@ -18,11 +28,7 @@
         <app-projects></app-projects>
     </div>
     
-    <div  
-        spyTarget [spyTargetId]="'studies'" 
-        id="{{'navigation.studies' | transloco}}" class="normal-section">
-        <app-certificates></app-certificates>
-    </div>
+   
     
     <div 
         spyTarget [spyTargetId]="'contact'" 

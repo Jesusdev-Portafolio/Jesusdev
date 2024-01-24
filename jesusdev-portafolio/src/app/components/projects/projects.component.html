@@ -1,2 +1,6 @@
-<span class="background"> </span>
+<div *ngIf="(theme$ | async) !== null ">
+    <div #backgroundThemeMain class="{{(theme$ | async).themeToAdd}}">
+        <div class="background"></div>
+    </div>
+</div>
 <p>projects works!</p>

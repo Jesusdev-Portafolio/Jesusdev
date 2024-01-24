@@ -17,7 +17,7 @@ export class AboutComponent implements OnInit {
   logos: LogoItem[] = [];
   @ViewChild('backgroundThemeAbout') backgroundThemeAbout!: ElementRef;
 
-  constructor(private translocoService: TranslocoService, private themeService: ThemeService, private logoService: LogoService) { }
+  constructor(private themeService: ThemeService, private logoService: LogoService) { }
 
 
   ngOnInit(): void {

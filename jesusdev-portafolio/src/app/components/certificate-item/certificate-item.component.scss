@@ -1,0 +1,86 @@
+.card{
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.card-img-top{
+    margin-bottom: -10px;
+    //transform:translate(-50%, -50%);
+}
+
+.card-img-shaking:hover{
+    animation: shake 1.5s linear;
+}
+
+.card-description{
+    text-align: center;
+    position: absolute;
+    top: 139px;
+    left: 36px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-title{
+    font-size: 20px;
+}
+
+
+.btn-primary, .btn-primary:active {
+    background-color: var(--btn-primario-color);
+    color: var(--color-fondo);
+    border: 0px;
+}
+
+.btn-primary:hover{
+    background-color: var(--btn-primario-hover);
+}
+
+@media (min-width:750px) and (max-width:1700px){
+    .card{
+        width: 13rem;
+    }
+    .card-description{
+        top: 118px;
+        left: 23px;
+        
+    }
+    .card-title{
+        font-size: 17px;
+    }
+}
+
+@media (min-width:1701px) {
+    .card{
+        width: 16rem;
+    }
+    .card-description{
+        top: 148px;
+        left: 44px;
+    }
+    .card-title{
+        font-size: 22px;
+    }
+}
+
+
+
+@keyframes shake{
+    0%{
+        rotate: 0deg;
+    }
+    25%{
+        rotate: -7deg;
+    }
+     50%{
+        rotate: 0deg;
+    }
+    75%{
+        rotate: 7deg;
+    }
+     100%{
+        rotate: 0deg;
+    }
+}

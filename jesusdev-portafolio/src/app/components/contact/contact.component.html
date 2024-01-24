@@ -1,3 +1,9 @@
+<div *ngIf="(theme$ | async) !== null ">
+    <div #backgroundThemeAbout class="{{(theme$ | async).themeToAdd}}">
+        <div class="background"></div>
+    </div>
+</div>
+
 <p>contact works!</p>
 
 

@@ -1,5 +1,11 @@
 .normal-section{
-    height: 100vh;
+    min-height: 100vh;
+    max-height: max-content;
     width: 100vw;
     max-width: 100%;
+}
+
+.background-color-base{
+    background-color: var(--color-fondo);
+    z-index: -1;
 }

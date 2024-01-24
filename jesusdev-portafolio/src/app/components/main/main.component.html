@@ -9,7 +9,7 @@
     <ng-container *transloco="let t">
         <div class="row content-height">
             <div class="col-md-4 d-flex align-items-center justify-content-end">
-                <img  class="my-img" src="../../../assets/gimp_img_portfolio.png" alt="imagen_perfil">
+                <img  class="my-img" src="/assets/profile/gimp_img_portfolio.png" alt="imagen_perfil">
             </div>
     
             <div class="col-8 d-flex justify-content-center align-items-start mb-5  flex-column">
@@ -26,9 +26,8 @@
                         <span class="main-title color-principal me-3">></span><span class="typing color-negro main-title"></span>
                       </ngx-typed-js>
                     </div>
-
                     <div [ngClass]="{'oculto': !showButtons, 'visible': showButtons}" class="d-flex justify-content-center text-center mt-2">
-                        <a href="{{cv}}" target="_blank" class="btn btn-primary mx-2 btn-principal"> {{t('main.downloadCvBtn')}}</a>
+                        <button routerLink="cv" class="btn btn-primary mx-2 btn-principal"> {{t('main.downloadCvBtn')}}</button>
                         <a [href]="'#'+t('navigation.contact')" class="btn btn-success mx-2 btn-secundario">{{t('main.contactBtn')}}</a>
                     </div>
                 </div>

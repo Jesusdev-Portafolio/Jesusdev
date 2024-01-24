@@ -1,0 +1,55 @@
+@property --myColorLight {
+    syntax: '<color>';
+    initial-value: rgba(255,255,255);
+    inherits: false;
+  }
+  
+
+
+  @property --myColorDark {
+    syntax: '<color>';
+    initial-value: rgba(65,65,65);
+    inherits: false;
+  }
+  
+  
+
+.background{
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: max-content;
+    position: absolute;
+    z-index:-1;
+}
+
+.light .background {
+    background: var(--myColorDark);
+    transition: --myColorDark 1.2s;
+  }
+
+.light .background{
+    --myColorDark: var(--myColorLight);
+}
+
+.dark  .background {
+    background: var(--myColorLight);
+    transition: --myColorLight 1.2s;
+  }
+
+.dark  .background{
+    --myColorLight: var(--myColorDark);
+}
+
+////////////////////
+
+.custom-height{
+  min-height: 100vh;
+  max-height: fit-content;
+}
+.certificates{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
