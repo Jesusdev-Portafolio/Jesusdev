@@ -24,7 +24,27 @@
     "studies":{
        "popUpBlocked":"Pop-up Blocker is enabled! Please add this site to your exception list"
     },
-    
+    "projects":{
+        "informaticDescription": "Electronic Store"
+    },
+    "contact":{
+        "mainTitle": "Let's work Together!",
+        "form":{
+            "name": "Name",
+            "enterprise": "Enterprise (optional)",
+            "email": "Email (optional)",
+            "phone": "Phone number (optional)",
+            "textareaPlaceholder": "Please, enter your message here",
+            "submit": "Submit"
+        }
+    },
+    "formErrors":{
+        "inputIsRequired": "is required",
+        "textAreaMinLength" : "Your message must contain at least 10 characters",
+        "emailPattern": "Invalid email format",
+        "nan": "Please enter numbers only",
+        "phone": "Invalid number format (e.g. 6xxxxxxxx)"
+    },
     "hola" : "hello from transloco"
 
 }

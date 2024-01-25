@@ -77,5 +77,54 @@ a{
     color: var(--color-fondo);
 }
 
+@media(max-width:749px){
+
+    .first{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    
+    .last{
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    li{
+       width: 20vw; 
+       max-width: 100%;
+       left: 0;
+       height: 8vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: -1.5px;
+    }
+
+    li:hover{
+        width: 20vw;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fas{
+        font-size: 30px;
+        width: 100%;
+        margin: auto;
+       
+        
+    }
+
+    .my-side-bar-item {
+       display:none;
+    }
+
+}
 
 

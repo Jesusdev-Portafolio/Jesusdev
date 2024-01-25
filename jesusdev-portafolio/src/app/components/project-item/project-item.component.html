@@ -1,0 +1,32 @@
+
+
+            <div class="container-custom d-flex">
+                <div class="img">
+                    <img src="{{project.imgSource}}" alt="{{project.name}}">
+                </div>
+                <div class="description-section">
+                    <div class="description-title">
+                        {{project.name}}
+                    </div>
+                    <div class="description">
+                        <ng-container *transloco="let t">
+                            <div class="description-text">
+                                {{t('projects.'+ project.description)}}
+                            </div>
+                        </ng-container>
+                      
+                        <div class="pills">
+                            <div *ngFor="let feature of project.features">
+                                <app-pill [feature]="feature"></app-pill>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="buttons text-center mt-4">
+                        <button class="btn btn-primary btn-principal mx-2"><i class="fa fa-play-circle icon" aria-hidden="true"></i></button>
+                        <a href="{{project.githubLink}}" target="_blank" class="btn btn-primary btn-secundario mx-2"><i class="fa fa-github icon" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        

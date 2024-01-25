@@ -1,52 +1,114 @@
-@property --myColor1Light {
-    syntax: '<color>';
-    initial-value: rgba(255,255,255);
-    inherits: false;
-  }
-  
-  @property --myColor2Light {
-    syntax: '<color>';
-    initial-value: rgba(33, 150, 243);
-    inherits: false;
-  }
 
-  @property --myColor1Dark {
-    syntax: '<color>';
-    initial-value: rgba(65,65,65);
-    inherits: false;
-  }
-  
-  @property --myColor2Dark {
-    syntax: '<color>';
-    initial-value: rgba(29,242,114);
-    inherits: false;
-  }
-
-.background{
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    position: absolute;
-    z-index:-1;
-}
-
+  /* background */
 .light .background {
-    background: linear-gradient(to top left, var(--myColor1Dark), 90%, var(--myColor2Dark));
-    transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
-  }
-
-.light .background{
-    --myColor1Dark: var(--myColor1Light);
-    --myColor2Dark: var(--myColor2Light);
+  background: linear-gradient(to top left, var(--myColor1Dark), 90%, var(--myColor2Dark));
+  transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
 }
 
 .dark  .background {
-    background: linear-gradient(to top left, var(--myColor1Light), 90%, var(--myColor2Light));
-    transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
+  background: linear-gradient(to top left, var(--myColor1Light), 90%, var(--myColor2Light));
+  transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
+}
+
+  /* sizing section */
+.custom-height{
+  height: 100vh;
+}
+
+.row{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+  /* stiling main title */
+
+h1{
+  color: var(--color-secundario);
+}
+
+  /* styling form */
+
+.form-container{
+  display: flex;
+  justify-content: center;
+}
+
+.my-form{
+  width: 700px;
+}
+
+.form-inputs{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ ///// custom inputs - text-area
+ 
+ .input-width{
+  width: 340px;
+}
+
+.text-area-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.input-mb{
+  margin-bottom: -7px;
+}
+
+.text-area-height{
+  height: 100px;
+}
+  
+ textarea{
+  background-color: transparent;
+  border-color: var(--input-border-color) !important;
+  color: var(--color-secundario);
+
+}
+
+textarea::placeholder{
+  color: var(--input-label-color);
+}
+
+textarea:focus{
+  background-color: transparent;
+  color: var(--color-secundario);
+}
+
+.form-control:focus{
+  box-shadow: var(--input-box-shadow-focus);
+}
+
+
+button{
+  min-width: 100px;
+}
+
+/////////////// reponsive ////////////////////
+
+@media(min-width: 1751px){
+  .text-area-height{
+    height: 200px;
+  }
+}
+
+@media(max-width: 750px){
+
+  .form-inputs{
+    justify-content: center;
   }
 
-.dark  .background{
-    --myColor1Light: var(--myColor1Dark);
-    --myColor2Light: var(--myColor2Dark);
+  .text-area-container{
+    width: 340px;
+  }
+
+
+
 }

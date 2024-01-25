@@ -24,6 +24,27 @@
     "studies":{
         "popUpBlocked" : "Su navegador tiene el bloqueador de Ventanas emergentes activado, por favor añada este sitio a la lista de excepciones"
     },
+    "projects":{
+        "informaticDescription": "Tienda de actículos electrónicos"
+    },
+    "contact" : {
+        "mainTitle": "¡Trabajemos Juntos!",
+        "form":{
+            "name": "Nombre",
+            "enterprise": "Empresa (opcional)",
+            "email": "Dirección de correo (opcional)",
+            "phone": "Número de teléfono (opcional)",
+            "textareaPlaceholder": "Por favor, inserte su mensaje aquí",
+            "submit": "Enviar"
+        }
+    },
+    "formErrors":{
+        "inputIsRequired": "es requerido",
+        "textAreaMinLength" : "Su mensaje debe contener al menos 10 caracteres",
+        "emailPattern": "Formato de email no válido",
+        "nan": "Porfavor solo ingrese números",
+        "phone" : "Formato de número no válido (ej 6xxxxxxxx)"
+    },
 
     "hola" : "hola desde transloco"
 }

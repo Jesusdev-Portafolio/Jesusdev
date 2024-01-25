@@ -4,6 +4,55 @@
     </div>
 </div>
 
-<p>contact works!</p>
+<div class="container custom-height">
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <ng-container *transloco="let t">
+                    <h1 class="mb-5 text-center">{{t('contact.mainTitle')}}</h1>
+                    <div class="form-container">
+                        <form class="my-form " [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                            <div class="form-inputs">
+
+                                <div class="input-width input-mb">
+                                    <app-text-input formControlName="name" [label]="t('contact.form.name')"></app-text-input>  
+                                </div>
+                                <div class=" input-width input-mb">
+                                    <app-text-input formControlName="enterprise" [label]="t('contact.form.enterprise')"></app-text-input> 
+                                </div>
+                                <div class="input-width input-mb" >
+                                    <app-text-input formControlName="email" [label]="t('contact.form.email')"></app-text-input> 
+                                </div>
+                                <div class="input-width input-mb">
+                                    <app-text-input formControlName="phone" [label]="t('contact.form.phone')"></app-text-input>
+                                </div>
+                                <div class="text-area-container mb-2">
+                                    <textarea 
+                                        [ngClass]="(contactForm.get('message').touched) 
+                                        ? !contactForm.get('message').valid ? 'is-invalid' : 'is-valid' : null"
+                                            formControlName="message" 
+                                        class="form-control text-area-height" 
+                                        placeholder="{{t('contact.form.textareaPlaceholder')}}" 
+                                        id="floatingTextarea">
+                                    </textarea>
+                                    <div class="invalid-feedback">
+                                        <ng-container *transloco="let t">
+                                            <span> {{t('formErrors.textAreaMinLength')}} </span> 
+                                        </ng-container>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="text-center">
+                                <button [disabled]="contactForm.invalid"  type="submit" class="btn btn-primary btn-principal">{{t('contact.form.submit')}}</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </ng-container>
+        </div>
+    </div>
+</div>
 
 

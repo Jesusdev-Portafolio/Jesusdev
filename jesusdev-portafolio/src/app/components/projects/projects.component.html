@@ -1,6 +1,21 @@
 <div *ngIf="(theme$ | async) !== null ">
-    <div #backgroundThemeMain class="{{(theme$ | async).themeToAdd}}">
+    <div class="{{(theme$ | async).themeToAdd}}">
         <div class="background"></div>
     </div>
 </div>
-<p>projects works!</p>
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 custom-height d-flex justify-content-center align-items-center">
+        
+            <div class="project-item" *ngIf="projects.length > 0">
+                    <div *ngFor="let project of projects">
+                        <app-project-item
+                            [project]= "project"
+                        >
+                        </app-project-item>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

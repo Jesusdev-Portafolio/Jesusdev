@@ -1,81 +1,38 @@
-
-//al fin consegui hacer lo de cambio de color del gradient aunque ni yo mismo lo entiendo bien :D
-
-// @property --myColor1Light {
-//     syntax: '<color>';
-//     initial-value: rgba(255,255,255);
-//     inherits: false;
-//   }
-  
-//   @property --myColor2Light {
-//     syntax: '<color>';
-//     initial-value: rgba(33, 150, 243);
-//     inherits: false;
-//   }
-
-//   @property --myColor1Dark {
-//     syntax: '<color>';
-//     initial-value: rgba(65,65,65);
-//     inherits: false;
-//   }
-  
-//   @property --myColor2Dark {
-//     syntax: '<color>';
-//     initial-value: rgba(29,242,114);
-//     inherits: false;
-//   }
-
-
-
-.background{
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    position: absolute;
-    z-index:-1;
-}
-
+//custom position of the gradient
 .light .background {
     background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
     transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
-
   }
 
-.light .background{
-    --myColor1Dark: var(--myColor1Light);
-    --myColor2Dark: var(--myColor2Light);
-}
-
-.dark  .background {
+  .dark  .background {
     background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
     transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
-
   }
 
-.dark  .background{
-    --myColor1Light: var(--myColor1Dark);
-    --myColor2Light: var(--myColor2Dark);
-}
-
-//////////////////////////////////////////////////////////////////////////////////
-  
+  ///////////////////////////
 
 
-/*.background-color{
-    background: linear-gradient(to bottom right, var(--myColor1),90%, var(--myColor2));
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-  
-}*/
+  .main-text-section{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+
+  .margin-second-line{ //this class is on main component.ts not in html
+    margin-left: 60px !important;
+  }
 
 .content-height{
     height: 100vh;
+}
+
+
+.img-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .my-img{
@@ -85,7 +42,7 @@
 }
 
 .custom-width{
-    width: 610px;
+    width: 625px;
 }
 
 .custom-height{
@@ -108,6 +65,63 @@
     font-weight: 700;
 }
 
+.main-title .typed-cursor{
+    font-weight:100;
+}
+
+@media(min-width:750px) and (max-width: 1750px){
+    .my-img{
+        width:250px;
+    } 
+    .main-title{
+        font-size: 47px;
+    }
+    .custom-width{
+        width: 545px;
+    }
+
+    .custom-height{
+        height: 145px;
+    }
+}
+
+@media(max-width:749px){
+    .my-img{
+        width: 150px;
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+
+    .main-title{
+        font-size: 25px;
+    }
+    .custom-width{
+        width: 320px;
+    }
+
+    .custom-height{
+        height: 75px;
+    }
+
+    .img-container{
+        justify-content: center;
+        align-items: end;
+        
+    }
+
+    .main-text-section{
+        justify-content: start;
+        align-items: center;
+    }
+
+    .margin-second-line{
+        margin-left: 40px !important;
+    }
+
+    .custom-margin{
+        margin-left: 20px;
+    }
+}
 
 
 

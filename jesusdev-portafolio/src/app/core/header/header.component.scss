@@ -26,6 +26,7 @@
 .flag{
     width: 20px;
     height: 16px;
+    border-radius: 100%;
 }
 
 
@@ -43,10 +44,14 @@ a:active, a:visited  {
 }
 
 
-@media(max-width: 600px){
+@media(max-width: 749px){
     form{
         margin-top: 2px;
         flex-direction: column;
+    }
+
+    .mobile-align{ //to fix mobile alineation header languaje buttons
+        margin-left: 4px !important;
     }
 }
 

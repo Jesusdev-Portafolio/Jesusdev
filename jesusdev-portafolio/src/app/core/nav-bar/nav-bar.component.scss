@@ -3,7 +3,6 @@
     padding: 0;
     outline: none;
     border: none;
-
     box-sizing: border-box;
 }
 
@@ -11,7 +10,27 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 3;
+}
+
+.items-container{
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width:749px){
+    .items-container{
+        flex-direction: row;
+    }
+
+    .my-side-bar{
+        width: 100vw;
+        top: auto;
+        transform: initial;
+        bottom: 0 !important;
+        
+        
+    }
 }
 
 

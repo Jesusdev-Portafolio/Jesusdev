@@ -20,6 +20,10 @@ import { SpyDirective, SpyTargetDirective, SpyTargetContainerDirective } from '@
 import { SwipperComponent } from './shared/swipper/swipper.component';
 import { ResumeComponent } from './Pages/resume/resume.component';
 import { CertificateItemComponent } from './components/certificate-item/certificate-item.component';
+import { ProjectItemComponent } from './components/project-item/project-item.component';
+import { PillComponent } from './shared/pill/pill.component';
+import { TextInputComponent } from './shared/text-input/text-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,9 @@ import { CertificateItemComponent } from './components/certificate-item/certific
     SwipperComponent,
     ResumeComponent,
     CertificateItemComponent,
+    ProjectItemComponent,
+    PillComponent,
+    TextInputComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,8 @@ import { CertificateItemComponent } from './components/certificate-item/certific
     TranslocoRootModule,
     SpyDirective,
     SpyTargetDirective,
-    SpyTargetContainerDirective
+    SpyTargetContainerDirective,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

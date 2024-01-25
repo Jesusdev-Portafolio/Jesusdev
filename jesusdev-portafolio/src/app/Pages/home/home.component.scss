@@ -3,9 +3,15 @@
     max-height: max-content;
     width: 100vw;
     max-width: 100%;
+    padding: 0 !important;
+    margin-bottom: -1px;
 }
 
 .background-color-base{
     background-color: var(--color-fondo);
     z-index: -1;
 }
+
+
+
+

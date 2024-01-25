@@ -1,18 +1,6 @@
-@property --myColorLight {
-    syntax: '<color>';
-    initial-value: rgba(255,255,255);
-    inherits: false;
-  }
-  
-
-
-  @property --myColorDark {
-    syntax: '<color>';
-    initial-value: rgba(65,65,65);
-    inherits: false;
-  }
-  
-  
+*:not(.background){
+  z-index: 2;
+}
 
 .background{
     width: 100vw;
@@ -20,25 +8,19 @@
     min-height: 100vh;
     max-height: max-content;
     position: absolute;
-    z-index:-1;
+    z-index: 1;
+  
 }
 
-.light .background {
-    background: var(--myColorDark);
-    transition: --myColorDark 1.2s;
-  }
 
-.light .background{
-    --myColorDark: var(--myColorLight);
+.light .background {
+  background: radial-gradient(var(--myColor2Dark) 1% , var(--myColor1Dark) 70% );
+  transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
 }
 
 .dark  .background {
-    background: var(--myColorLight);
-    transition: --myColorLight 1.2s;
-  }
-
-.dark  .background{
-    --myColorLight: var(--myColorDark);
+  background: radial-gradient(var(--myColor2Light) 1%,var(--myColor1Light) 60%, var(--myColor1Light) 1% );
+  transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
 }
 
 ////////////////////
@@ -46,10 +28,21 @@
 .custom-height{
   min-height: 100vh;
   max-height: fit-content;
+  
 }
 .certificates{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: -100px;
+  margin-left: 70px;
+}
+
+@media(max-width: 749px){
+  .certificates{
+    margin-top: 0;
+    margin-left: 0;
+  }
+ 
 }

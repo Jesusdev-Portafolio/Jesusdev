@@ -1,7 +1,8 @@
-<li [ngClass]="[ isFirst ? 'first' : isLast ? 'last' : '' ]"
+<li  spy [spyTargetId]="customSpyId" 
+    [ngClass]="[ isFirst ? 'first' : isLast ? 'last' : '' ]"
 >
     <a
-     spy [spyTargetId]="customSpyId" 
+      
      href="#{{link}}">
         <i class=" fas {{icon}}" aria-hidden="true"></i>
         <span class="my-side-bar-item">{{label}}</span>

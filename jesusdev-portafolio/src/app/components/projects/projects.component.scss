@@ -1,52 +1,27 @@
-@property --myColor1Light {
-    syntax: '<color>';
-    initial-value: rgba(255,255,255);
-    inherits: false;
-  }
-  
-  @property --myColor2Light {
-    syntax: '<color>';
-    initial-value: rgba(33, 150, 243);
-    inherits: false;
-  }
-
-  @property --myColor1Dark {
-    syntax: '<color>';
-    initial-value: rgba(65,65,65);
-    inherits: false;
-  }
-  
-  @property --myColor2Dark {
-    syntax: '<color>';
-    initial-value: rgba(29,242,114);
-    inherits: false;
-  }
-
-.background{
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    position: absolute;
-    z-index:-1;
-}
-
 .light .background {
     background: linear-gradient(to bottom left, var(--myColor1Dark), 90%, var(--myColor2Dark));
     transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
   }
 
-.light .background{
-    --myColor1Dark: var(--myColor1Light);
-    --myColor2Dark: var(--myColor2Light);
-}
-
-.dark  .background {
+  .dark  .background {
     background: linear-gradient(to bottom left, var(--myColor1Light), 90%, var(--myColor2Light));
     transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
   }
 
-.dark  .background{
-    --myColor1Light: var(--myColor1Dark);
-    --myColor2Light: var(--myColor2Dark);
-}
+  .custom-height{
+    height: 100vh;
+  }
+
+  .project-item{
+    margin-top: -15px;
+  }
+
+  @media(max-width:749px){
+      .project-item{
+        margin-top: 0;
+      }
+  }
+
+
+
+ 

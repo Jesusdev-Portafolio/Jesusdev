@@ -1,0 +1,22 @@
+.pill{
+    background-color: var(--pill-background-color);
+    font-size: 12px;
+    color: var(--pill-color);
+    font-family: 'Readex Pro', sans-serif;
+    padding: 0.2em 1em;
+    margin: 0.23em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.pill:hover{
+    background-color: var(--pill-background-color-hover);
+}
+
+@media(min-width:1751px){
+    .pill{
+        font-size: 14px ;
+    }
+}

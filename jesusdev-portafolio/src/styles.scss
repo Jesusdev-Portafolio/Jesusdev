@@ -1,22 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
-
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    
+}
 
 body * {
   
-    transition: background-color .5s linear;
-    transition: color .5s linear;
+   transition: all 1s linear;
+    transition: color 1s linear;
+   
    
   }
 
-  *{
-
-    --myColor1Light : rgba(255,255,255);
-    --myColor2Light : rgba(33, 150, 243);
-  
-    --myColor1Dark : rgba(65,65,65);
-    --myColor2Dark : rgba(29,242,114);
-  
+  *{ //esto para firefox porque las property no le gustan y tiene los colores pero no se hacen las transiciones de colores.
+    //las property para crome e IE porque las properties se pueden hacer transiciones de colores gradients
+    --myColor1Light: rgba(255,255,255);
+    --myColor2Light: rgba(33,150,243);
+    --myColor1Dark: rgba(65,65,65);
+    --myColor2Dark: rgba(29,242,114);
   }
+
+ @property --myColor1Light {
+    syntax: '<color>';
+    initial-value: rgba(255,255,255);
+    inherits: false;
+  }
+  
+  @property --myColor2Light {
+    syntax: '<color>';
+    initial-value: rgba(33, 150, 243);
+    inherits: false;
+  }
+
+  @property --myColor1Dark {
+    syntax: '<color>';
+    initial-value: rgba(65,65,65);
+    inherits: false;
+  }
+  
+  @property --myColor2Dark {
+    syntax: '<color>';
+    initial-value: rgba(29,242,114);
+    inherits: false;
+  }
+
+.background{
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    position: absolute;
+    z-index:-1;
+}
+
+.light .background{
+    --myColor1Dark: var(--myColor1Light);
+    --myColor2Dark: var(--myColor2Light);
+}
+
+
+.dark  .background{
+    --myColor1Light: var(--myColor1Dark);
+    --myColor2Light: var(--myColor2Dark);
+}
+
+
+// .light .background {
+//     background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
+//     transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
+//   }
+
+// .dark  .background {
+//     background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
+//     transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
+//   }
+
 
 
 
@@ -34,10 +95,18 @@ body * {
     
     //side-bar
     --side-bar-background-color: rgba(65,65,65,.8);
-    --side-bar-box-shadow: 0 20px 35px rgba(0,0,0,.1);
-
-    --myColor1w: rgba(255,255,255);
+    --side-bar-box-shadow: 0 20px 35px rgba(0,0,0,.1);  
     
+    //pill
+    --pill-background-color: var(--side-bar-background-color);
+    --pill-background-color-hover: var(--color-secundario);
+    --pill-color: var(--color-fondo);
+
+    //inputs
+    --input-border-color: rgba(33, 150, 243, .3);
+    --input-box-shadow-focus: 0 0 0 0.25rem rgba(33, 150, 243,.25);
+
+    --input-label-color: rgba(65,65,65,.7);
 }
 
 
@@ -55,6 +124,19 @@ body * {
     //side-bar
     --side-bar-background-color: rgba(255,255,255,.1);
     --side-bar-box-shadow: 0 20px 35px rgba(255,255,255,.1);
+
+    //pill
+    --pill-background-color: var(--side-bar-background-color);
+    --pill-background-color-hover: var(--btn-secundario-hover);
+    --pill-color: var(--color-principal);
+
+    //inputs
+    --input-border-color: rgba(29,242,114, .3);
+    --input-box-shadow-focus: 0 0 0 0.25rem rgba(29,242,114,.25);
+
+    --input-label-color: rgba(255,255,255,.6);
+
+
 
 
 }
@@ -74,11 +156,12 @@ body * {
 
 
 
-.btn-principal{
+.btn-principal , .btn-principal:disabled{
     background-color: var(--btn-primario-color);
     color: var(--color-fondo);
     border: 1px solid var(--color-principal);
-    transition: background-color .7s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
    
 }
 
@@ -86,14 +169,54 @@ body * {
     background-color: var(--btn-primario-hover);
     color: var(--color-fondo);
     border: 1px solid var(--color-principal);
+   
 }
+
+.btn-principal:active{
+    background-color: var(--btn-primario-hover) !important;
+    color: var(--color-fondo) !important;
+    border-color: var(--color-principal)!important;
+   
+   
+}
+
 
 .btn-secundario{
     background-color: var(--btn-secundario-color);
-    transition: background-color .7s linear;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+
 }
 
 .btn-secundario:hover{
     background-color: var(--btn-secundario-hover);
+}
+
+.btn-secundario:active{
+    background-color: var(--btn-secundario-hover) !important;
+}
+
+.margin-second-line{ //this one picks ngx-typed class only from global css clases thats why is here
+    margin-left: 60px !important;
+}
+
+.invalid-feedback{
+    display: inline-block !important;
+    opacity: 0 !important;
+}
+.is-invalid~.invalid-feedback{
+    opacity: 1 !important;
+}
+
+.is-invalid~.invalid-feedback .save-space{
+    opacity: 1 !important;
+    display: none;
+}
+
+
+@media(max-width:749px){
+    .margin-second-line{
+        margin-left: 30px !important;
+    }
 }
 

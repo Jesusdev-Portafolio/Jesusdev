@@ -11,6 +11,7 @@ import { LanguajeService } from './services/languaje.service';
     //TODO:usar animate para transiciones
     //TODO: hacer una logica por si lo ve en mobile para darle un boton a descargar porque si no no lo podra ver
     //TODO: hacer el responsive para mobile y ver que voy a hacer con los certificados poner un slider o algo.
+    //TODO: Cambiar el boton principal dark que lo odio de lo feo que es
 
     
 export class AppComponent implements OnInit {
