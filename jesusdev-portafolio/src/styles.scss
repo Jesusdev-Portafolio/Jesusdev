@@ -213,10 +213,31 @@ body * {
     display: none;
 }
 
+.typed-cursor{
+    font-weight: 400;
+}
 
-@media(max-width:749px){
+@media(min-width:1751px){
+  
+    .typed-cursor{
+        font-size: 55px !important;
+    }
+}
+
+@media(min-width:751px) and (max-width:1750px){
+    .typed-cursor{
+        font-size: 47px !important;
+    } 
+}
+
+
+@media(max-width:750px){
     .margin-second-line{
         margin-left: 30px !important;
+    }
+
+    .typed-cursor{
+        font-size: 25px !important;
     }
 }
 

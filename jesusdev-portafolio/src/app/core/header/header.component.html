@@ -5,14 +5,14 @@
         <div class="d-flex mx-2">
             <i class="fa fa-sun-o color-secundario" aria-hidden="true"></i>
             <div (change)="toogleTheme()">
-              <app-switcher [isChecked]="!isLightTheme"></app-switcher>
+              <app-switcher [name]="'theme'" [isChecked]="!isLightTheme"></app-switcher>
             </div>
             <i class="fa fa-moon-o color-secundario" aria-hidden="true"></i>
         </div>
         <div class="d-flex mx-2 mobile-align">
             <div class="vertical-align"><img class="flag" src="/assets/flags/spain_flag.jpg" alt="spanish"></div>
             <div (change)="toogleLanguaje()">
-              <app-switcher [isChecked]="!isSpanishLanguaje"></app-switcher>
+              <app-switcher [name]="'lang'" [isChecked]="!isSpanishLanguaje"></app-switcher>
             </div>
             <div class="vertical-align"><img class="flag" src="/assets/flags/UK_flag.png" alt="english"></div>
         </div>

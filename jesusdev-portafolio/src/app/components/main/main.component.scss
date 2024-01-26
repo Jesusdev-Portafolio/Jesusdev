@@ -15,7 +15,7 @@
   .main-text-section{
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 30px;
     flex-direction: column;
   }
@@ -31,7 +31,7 @@
 
 .img-container{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -76,6 +76,11 @@
     .main-title{
         font-size: 47px;
     }
+
+    .main-title .typed-cursor{
+        font-size: 47px !important;
+    }
+    
     .custom-width{
         width: 545px;
     }
@@ -105,12 +110,12 @@
 
     .img-container{
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
         
     }
 
     .main-text-section{
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
     }
 

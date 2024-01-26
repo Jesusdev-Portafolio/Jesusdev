@@ -9,6 +9,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 export class SwitcherComponent implements OnInit {
 
   @Input() isChecked : boolean = false;
+  @Input() name: string = "";
 
   constructor() { }
 
