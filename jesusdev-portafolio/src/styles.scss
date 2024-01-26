@@ -217,6 +217,16 @@ body * {
     font-weight: 400;
 }
 
+.toast-success{
+    background-color: var(--color-principal);
+}
+
+ngx-spinner{
+    z-index: 100;
+}
+
+
+
 @media(min-width:1751px){
   
     .typed-cursor{

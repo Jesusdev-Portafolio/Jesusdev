@@ -13,7 +13,7 @@ import { SwitcherComponent } from './shared/switcher/switcher.component'
 import { NgxTypedJsModule } from 'node_modules/ngx-typed-js';
 import { HeaderComponent } from './core/header/header.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component'
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module'
 import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.component';
 import { SpyDirective, SpyTargetDirective, SpyTargetContainerDirective } from '@thejlifex/ngx-scroll-spy';
@@ -24,6 +24,9 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
 import { PillComponent } from './shared/pill/pill.component';
 import { TextInputComponent } from './shared/text-input/text-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -55,9 +58,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     SpyDirective,
     SpyTargetDirective,
     SpyTargetContainerDirective,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
+    }),
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

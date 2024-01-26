@@ -7,11 +7,11 @@
 <div *ngIf="(lang$ | async)">
     <div *ngIf="(lang$ | async) === 'es'">
         <object class="cv" data="/assets/cv/Jesus_Noguera_CV_es.pdf" type="application/pdf">
-            <p class="fallback-no-pdf-plugin"> Su navegador no tiene un plugin PDF, por favor descargar directamente
-                 <a href="/assets/cv/Jesus_Noguera_CV_en.pdf"> aqui </a>
+            <p class="fallback-no-pdf-plugin"> Su navegador no tiene un plugin PDF, por favor 
+                 <a href="/assets/cv/Jesus_Noguera_CV_en.pdf"> descargar directamente aqui </a>
             </p>
             <div class="cv-btn-container">
-                <button class="btn btn-primary" routerLink="/">Volver</button>
+                <button class="btn btn-primary btn-principal" routerLink="/">Volver</button>
             </div>
         </object>
         
@@ -23,7 +23,7 @@
                 download the PDF file.</a>
             </p>
             <div class="cv-btn-container">
-                <button class="btn btn-primary" routerLink="/">Go Back</button>
+                <button class="btn btn-primary btn-principal" routerLink="/">Go Back</button>
             </div>
         </object>
     </div>   

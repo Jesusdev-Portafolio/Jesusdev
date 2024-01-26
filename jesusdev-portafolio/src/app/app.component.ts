@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ThemeService } from './services/theme.service';
 import { LanguajeService } from './services/languaje.service';
+import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +19,11 @@ export class AppComponent implements OnInit {
 
   title = 'jesusdev-portafolio';
 
-  constructor(private renderer: Renderer2, private themeService: ThemeService, private languajeService: LanguajeService){}
+  constructor(private renderer: Renderer2, private themeService: ThemeService, private languajeService: LanguajeService, private spinner: NgxSpinnerService){}
   
   ngOnInit(): void {
     this.getUserTheme();
-    this.getUserLanguaje();
+    this.getUserLanguaje();   
   }
 
   getUserTheme(){
