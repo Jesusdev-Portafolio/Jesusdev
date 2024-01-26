@@ -9,6 +9,7 @@ import { EmailService } from 'src/app/services/email.service';
 import { EmailJSResponseStatus } from '@emailjs/browser';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { TranslocoService } from '@ngneat/transloco';
 
 
 @Component({
@@ -20,14 +21,16 @@ export class ContactComponent implements OnInit {
 
   theme$: Observable<Theme>;
   contactForm: FormGroup;
-  constructor( private themeService: ThemeService, private emailService : EmailService, private toastr: ToastrService, private spinner: NgxSpinnerService) { }
+  constructor( private themeService: ThemeService, private emailService : EmailService, private toastr: ToastrService, private spinner: NgxSpinnerService, private transloco: TranslocoService) { }
 
   ngOnInit(): void {
     this.theme$ = this.themeService.theme$;
     this.createContactForm();
     this.addValidationsForNonRequiredFields(); //this one is for if the field is not filled ok, but if it is, then validate that information
 //esto ahce que al reset lo ponga con '' y no con null
+
   }
+
 
   createContactForm(){
     this.contactForm = new FormGroup({
@@ -49,11 +52,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(){
-    this.spinner.show(undefined,{
-      type: 'ball-spin-clockwise',
-      bdColor: 'rgba(255,255,255, 0.7)',
-      color : '#333333'
-    });
+    this.spinner.show();
     this.emailService.sendMail(this.contactForm)
       .then((value) => this.mensajeEnviado(value));
   }
@@ -81,6 +80,9 @@ export class ContactComponent implements OnInit {
 
   private mensajeEnviado(value: EmailJSResponseStatus){
     this.spinner.hide();
+
+    let toastrMessages = this.transloco.translateObject('toastr');
+
     if(value.status.toString().startsWith('2')){
        this.contactForm.reset(); //after reset if some input was filled need to backup to non required because its optional field
        this.contactForm.controls['email'].clearValidators();
@@ -89,15 +91,15 @@ export class ContactComponent implements OnInit {
        this.contactForm.controls['phone'].updateValueAndValidity({emitEvent:false});
 
 
-        this.toastr.success('Su mensaje enviado con éxito','Enviado!' ,{
-          timeOut:1500,
+        this.toastr.success(toastrMessages.successDescription, toastrMessages.successTitle ,{
+          timeOut:2500,
           positionClass:'toast-top-center'
         });
 
     }
     else{
-        this.toastr.error('Oops!', 'mensaje no enviado, porfavor intentelo de nuevo',{
-          timeOut:1500,
+        this.toastr.error(toastrMessages.errorDescription , toastrMessages.errorTitle,{
+          timeOut:2500,
           positionClass:'toast-top-center'
         }); 
     }

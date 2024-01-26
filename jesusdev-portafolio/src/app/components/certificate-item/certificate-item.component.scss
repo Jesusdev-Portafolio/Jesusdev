@@ -1,6 +1,8 @@
 .card{
     background-color: transparent;
     border: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
     cursor: pointer;
 }
 
@@ -38,9 +40,27 @@
     background-color: var(--btn-primario-hover);
 }
 
-@media (min-width:750px) and (max-width:1700px){
+@media (max-width:750px){
+    .card{
+        width: 45vw;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .card-description{
+        top: 62%;
+        left: 3%;
+    }
+    .card-title{
+        font-size: 15px;
+    }
+}
+
+@media (min-width:751px) and (max-width:1700px){
     .card{
         width: 13rem;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .card-description{
         top: 118px;
@@ -64,6 +84,8 @@
         font-size: 22px;
     }
 }
+
+
 
 
 

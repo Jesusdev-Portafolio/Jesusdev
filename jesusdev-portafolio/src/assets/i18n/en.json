@@ -45,6 +45,12 @@
         "nan": "Please enter numbers only",
         "phone": "Invalid number format (e.g. 6xxxxxxxx)"
     },
-    "hola" : "hello from transloco"
+    "spinner": "loading...",
+    "toastr":{
+        "successTitle": "Email sent!",
+        "successDescription": "Your message was sent successfully",
+        "errorTitle": "Opps!",
+        "errorDescription": "Something went wrong, please try again"
+    }
 
 }

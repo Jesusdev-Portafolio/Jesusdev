@@ -35,12 +35,25 @@
 }
 
 
-
-
-
-
-@media(min-width: 800px) and (max-width: 1700px){
+@media(min-width: 751px) and (max-width: 1700px){
     .about-text{
         margin-left: 5rem !important;
+    }
+}
+
+@media(max-width:750px){
+    .swipper-about{
+        top: -70px;
+    }
+
+    .about-title{
+        top: 10px;
+    }
+    .about-title h1{
+        font-size: 40px;
+    }
+
+    .about-text{
+        margin-top: 70px
     }
 }

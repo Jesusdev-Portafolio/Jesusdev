@@ -45,6 +45,12 @@
         "nan": "Porfavor solo ingrese números",
         "phone" : "Formato de número no válido (ej 6xxxxxxxx)"
     },
+    "spinner": "cargando...",
+    "toastr":{
+        "successTitle": "¡Mensaje enviado!",
+        "successDescription": "Su mensaje ha sido enviado con éxito",
+        "errorTitle": "Opps!",
+        "errorDescription": "Algo salió mal, por favor inténtelo de nuevo"
+    }
 
-    "hola" : "hola desde transloco"
 }

@@ -1,6 +1,9 @@
-<ngx-spinner size="medium" type="ball-spin-clockwise">
-    <h3></h3>
-</ngx-spinner>
+<ng-container *transloco="let t" >
+    <ngx-spinner size="medium" type="pacman"  [color]="spinnerColor" [bdColor]="spinnerBgColor" >
+        <h3>{{t('spinner')}}</h3>
+    </ngx-spinner>
+</ng-container>
+
 <app-header></app-header>
 <router-outlet></router-outlet>
 

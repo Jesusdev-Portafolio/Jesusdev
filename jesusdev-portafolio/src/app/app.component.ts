@@ -11,13 +11,15 @@ import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
 
     //TODO:usar animate para transiciones
     //TODO: hacer una logica por si lo ve en mobile para darle un boton a descargar porque si no no lo podra ver
-    //TODO: hacer el responsive para mobile y ver que voy a hacer con los certificados poner un slider o algo.
     //TODO: Cambiar el boton principal dark que lo odio de lo feo que es
 
     
 export class AppComponent implements OnInit {
 
   title = 'jesusdev-portafolio';
+
+  spinnerBgColor: string;
+  spinnerColor: string;
 
   constructor(private renderer: Renderer2, private themeService: ThemeService, private languajeService: LanguajeService, private spinner: NgxSpinnerService){}
   
@@ -33,11 +35,23 @@ export class AppComponent implements OnInit {
       next:({themeToRemove, themeToAdd}) =>{
         this.renderer.removeClass(document.body,themeToRemove);
         this.renderer.addClass(document.body, themeToAdd);
+
+        this.configureSpinnerStyleBasedOnTheme(themeToAdd);
+
       }
     })
-    
+  }
 
+  configureSpinnerStyleBasedOnTheme(theme :string){
+      if(theme === "light"){
+        this.spinnerBgColor = "rgba(255,255,255,.7)"
+        this.spinnerColor = "rgba(33, 150, 243, 1)"
+      }
 
+      else{
+        this.spinnerBgColor = "rgba(65,65,65,.7)";
+        this.spinnerColor = "rgba(29,242,114,1)";
+      }
   }
 
   getUserLanguaje(){
