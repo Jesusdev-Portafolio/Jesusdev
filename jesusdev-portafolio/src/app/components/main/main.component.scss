@@ -1,12 +1,12 @@
 //custom position of the gradient
 .light .background {
     background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
-    transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
+    transition: --myColor1Dark .8s, --myColor2Dark .8s;
   }
 
   .dark  .background {
     background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
-    transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
+    transition: --myColor1Light .8s, --myColor2Light .8s;
   }
 
   ///////////////////////////

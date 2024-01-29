@@ -21,6 +21,8 @@ export class ContactComponent implements OnInit {
 
   theme$: Observable<Theme>;
   contactForm: FormGroup;
+  spinnerBgColor: string;
+  spinnerColor: string;
   constructor( private themeService: ThemeService, private emailService : EmailService, private toastr: ToastrService, private spinner: NgxSpinnerService, private transloco: TranslocoService) { }
 
   ngOnInit(): void {
@@ -29,8 +31,27 @@ export class ContactComponent implements OnInit {
     this.addValidationsForNonRequiredFields(); //this one is for if the field is not filled ok, but if it is, then validate that information
 //esto ahce que al reset lo ponga con '' y no con null
 
+    this.configureSpinnerStyleBasedOnTheme();
+
+ 
+
   }
 
+  configureSpinnerStyleBasedOnTheme(){
+      this.theme$.subscribe({
+        next:({themeToRemove, themeToAdd})=>{
+          if(themeToAdd === "light"){
+            this.spinnerBgColor = "rgba(255,255,255,.7)"
+            this.spinnerColor = "rgba(33, 150, 243, 1)"
+          }
+    
+          else{
+            this.spinnerBgColor = "rgba(65,65,65,.7)";
+            this.spinnerColor = "rgba(29,242,114,1)";
+          }
+        }
+      })
+  }
 
   createContactForm(){
     this.contactForm = new FormGroup({
@@ -52,7 +73,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(){
-    this.spinner.show();
+    this.spinner.show("sendingEmail");
     this.emailService.sendMail(this.contactForm)
       .then((value) => this.mensajeEnviado(value));
   }
@@ -79,7 +100,7 @@ export class ContactComponent implements OnInit {
   }
 
   private mensajeEnviado(value: EmailJSResponseStatus){
-    this.spinner.hide();
+    this.spinner.hide("sendingEmail");
 
     let toastrMessages = this.transloco.translateObject('toastr');
 
@@ -92,18 +113,20 @@ export class ContactComponent implements OnInit {
 
 
         this.toastr.success(toastrMessages.successDescription, toastrMessages.successTitle ,{
-          timeOut:2500,
+          timeOut:3500,
           positionClass:'toast-top-center'
         });
 
     }
     else{
         this.toastr.error(toastrMessages.errorDescription , toastrMessages.errorTitle,{
-          timeOut:2500,
+          timeOut:3500,
           positionClass:'toast-top-center'
         }); 
     }
   }
+
+ 
 
 }
 

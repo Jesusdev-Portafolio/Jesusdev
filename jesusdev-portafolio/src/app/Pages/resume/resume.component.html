@@ -5,14 +5,24 @@
 </div>
 
 <div *ngIf="(lang$ | async)">
+
+    <div>
+        <ng-container *transloco="let t" >
+            <button
+                routerLink="/" 
+                class="go-back btn btn-prymary btn-principal btn-bg-color">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                {{t('resume.goBack')}}
+            </button>
+        </ng-container>
+        
+    </div>
+
     <div *ngIf="(lang$ | async) === 'es'">
         <object class="cv" data="/assets/cv/Jesus_Noguera_CV_es.pdf" type="application/pdf">
             <p class="fallback-no-pdf-plugin"> Su navegador no tiene un plugin PDF, por favor 
                  <a href="/assets/cv/Jesus_Noguera_CV_en.pdf"> descargar directamente aqui </a>
             </p>
-            <div class="cv-btn-container">
-                <button class="btn btn-primary btn-principal" routerLink="/">Volver</button>
-            </div>
         </object>
         
     </div>
@@ -22,9 +32,6 @@
                 Instead you can <a href="/assets/cv/Jesus_Noguera_CV_en.pdf">click here to
                 download the PDF file.</a>
             </p>
-            <div class="cv-btn-container">
-                <button class="btn btn-primary btn-principal" routerLink="/">Go Back</button>
-            </div>
         </object>
     </div>   
 </div>

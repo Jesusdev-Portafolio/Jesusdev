@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 html,body{
     height: 100%;
     width: 100%;
@@ -8,11 +10,7 @@ html,body{
 }
 
 body * {
-  
-   transition: all 1s linear;
-    transition: color 1s linear;
-   
-   
+   transition: all .3s linear;   
   }
 
   *{ //esto para firefox porque las property no le gustan y tiene los colores pero no se hacen las transiciones de colores.
@@ -88,10 +86,13 @@ body * {
     --color-secundario: rgba(65,65,65,1); // letras
 
     //botones
-    --btn-primario-color:rgba(33, 150, 243,.9);
+    --btn-primario-color: rgba(255,255,255,1);
+    --btn-primario-bg-color:rgba(33, 150, 243,.9);
     --btn-primario-hover:rgba(33, 150, 243,1);
-    --btn-secundario-color:rgba(65,65,65,.9);
+    --btn-secundario-color:rgba(255,255,255,1);
+    --btn-secundario-bg-color:rgba(65,65,65,.9);
     --btn-secundario-hover:rgba(65,65,65,1);
+    --btn-cv-bg-color:rgba(33, 150, 243,.9);
     
     //side-bar
     --side-bar-background-color: rgba(65,65,65,.8);
@@ -105,8 +106,16 @@ body * {
     //inputs
     --input-border-color: rgba(33, 150, 243, .3);
     --input-box-shadow-focus: 0 0 0 0.25rem rgba(33, 150, 243,.25);
-
     --input-label-color: rgba(65,65,65,.7);
+
+    //toast
+    --toast-bg-color: var(--color-principal);
+    --toast-color: var(--color-fondo);
+
+    //scroll bar
+    --scroll-bar-bg-color: rgba(65,65,65,.4);
+    --scroll-bar-btn: rgba(33, 150, 243, .8);
+
 }
 
 
@@ -116,10 +125,14 @@ body * {
     --color-secundario: rgba(255,255,255);
 
      //botones
-     --btn-primario-color:rgba(29,242,114,.9); 
-     --btn-primario-hover:rgba(29,242,114,1);
-     --btn-secundario-color:rgba(255,255,255,.1);
-     --btn-secundario-hover:rgba(255,255,255,.2);
+     --btn-primario-color: rgba(29,242,114);
+     --btn-primario-bg-color:rgba(255,255,255,.1); 
+     --btn-primario-hover:rgba(255,255,255,.2);
+     --btn-secundario-bg-color:rgba(255,255,255,.9);
+     --btn-secundario-color:rgba(65,65,65,1);
+     --btn-secundario-hover:rgba(255,255,255,1);
+
+     --btn-cv-bg-color:rgba(65,65,65,.8);
 
     //side-bar
     --side-bar-background-color: rgba(255,255,255,.1);
@@ -127,20 +140,29 @@ body * {
 
     //pill
     --pill-background-color: var(--side-bar-background-color);
-    --pill-background-color-hover: var(--btn-secundario-hover);
+    --pill-background-color-hover: rgba(255,255,255,.2);
     --pill-color: var(--color-principal);
 
     //inputs
     --input-border-color: rgba(29,242,114, .3);
     --input-box-shadow-focus: 0 0 0 0.25rem rgba(29,242,114,.25);
-
     --input-label-color: rgba(255,255,255,.6);
 
+    //toast
+    --toast-bg-color: #51A351;
+    --toast-color: var(--color-secundario);
 
-
+       //scroll bar
+     --scroll-bar-bg-color: rgba(65,65,65,.8);
+     --scroll-bar-btn: rgba(29,242,114);
 
 }
 
+*{
+    scrollbar-width: thin; //firefox
+    scrollbar-color: #aaa #ddd; /* color del pulgar color de la pista */ //FIREFOX
+
+}
 
 .color-fondo{
     color: var(--color-fondo)
@@ -157,24 +179,23 @@ body * {
 
 
 .btn-principal , .btn-principal:disabled{
-    background-color: var(--btn-primario-color);
-    color: var(--color-fondo);
+    background-color: var(--btn-primario-bg-color);
+    color: var(--btn-primario-color);
     border: 1px solid var(--color-principal);
-    transition: background-color 1s linear;
-    transition: color 1s linear;
+    transition:  all .2s linear;
    
 }
 
 .btn-principal:hover{
     background-color: var(--btn-primario-hover);
-    color: var(--color-fondo);
+    color: var(--btn-primario-color);
     border: 1px solid var(--color-principal);
    
 }
 
 .btn-principal:active{
     background-color: var(--btn-primario-hover) !important;
-    color: var(--color-fondo) !important;
+    color: var(--btn-primario-color) !important;
     border-color: var(--color-principal)!important;
    
    
@@ -182,25 +203,27 @@ body * {
 
 
 .btn-secundario{
-    background-color: var(--btn-secundario-color);
-    transition: background-color 1s linear;
-    transition: color 1s linear;
+    background-color: var(--btn-secundario-bg-color);
+    transition:  all .2s linear;
+    color: var(--btn-secundario-color);
 
 }
 
 .btn-secundario:hover{
     background-color: var(--btn-secundario-hover);
+    color: var(--btn-secundario-color);
 }
 
 .btn-secundario:active{
     background-color: var(--btn-secundario-hover) !important;
+    color: var(--btn-secundario-color);
 }
 
 .margin-second-line{ //this one picks ngx-typed class only from global css clases thats why is here
     margin-left: 60px !important;
 }
 
-.invalid-feedback{
+.invalid-feedback{ /// customizing bootstrap css class for input errros
     display: inline-block !important;
     opacity: 0 !important;
 }
@@ -217,9 +240,18 @@ body * {
     font-weight: 400;
 }
 
-.toast-success{
-    background-color: var(--color-principal);
+//toastr
+
+.toast-container .ngx-toastr{
+    color: var(--toast-color);
 }
+
+.toast-success{
+    background-color: var(--toast-bg-color);
+}
+
+
+/////
 
 ngx-spinner{
     z-index: 100;
@@ -250,4 +282,30 @@ ngx-spinner{
         font-size: 25px !important;
     }
 }
+
+///////////////// scrolbar /////////////////
+
+
+/* Para WebKit (Safari, Chrome, Opera) */
+::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll-bar-bg-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-bar-btn);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-bar-btn);
+}
+
+
+
 

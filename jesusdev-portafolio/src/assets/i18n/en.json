@@ -46,11 +46,15 @@
         "phone": "Invalid number format (e.g. 6xxxxxxxx)"
     },
     "spinner": "loading...",
+    "spinnerEmail": "sending email...",
     "toastr":{
         "successTitle": "Email sent!",
         "successDescription": "Your message was sent successfully",
         "errorTitle": "Opps!",
         "errorDescription": "Something went wrong, please try again"
+    },
+    "resume":{
+        "goBack": "Back to portfolio"
     }
 
 }

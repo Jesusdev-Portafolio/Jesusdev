@@ -25,8 +25,11 @@ export class AppComponent implements OnInit {
   
   ngOnInit(): void {
     this.getUserTheme();
-    this.getUserLanguaje();   
+    this.getUserLanguaje();  
+    
   }
+    
+  
 
   getUserTheme(){
     this.themeService.getThemeForUser();

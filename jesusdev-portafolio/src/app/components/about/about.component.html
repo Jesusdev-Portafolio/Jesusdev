@@ -1,27 +1,29 @@
 <div *ngIf="(theme$ | async) !== null ">
-    <div #backgroundThemeAbout class="{{(theme$ | async).themeToAdd}}">
+    <div class="{{(theme$ | async).themeToAdd}}">
         <div class="background"></div>
     </div>
 </div>
 
 <div class="container">
-    <ng-container *transloco="let t" >
+    <ng-container *ngTemplateOutlet="aboutTemplate"></ng-container>
+
+    <ng-template #aboutTemplate>
         <div class="row my-container-height justify-content-center align-items-center">
             <div class="col-md-6 col-sm-12">
-                <p class="about-text">
-                    {{t('about.aboutText')}}
+                <p #text class="about-text animate__animated animate__slow hide-text ">
+                     {{aboutObjectTransloco.aboutText}}
                 </p>
             </div>
             <div class="col-md-6 col-sm-12 justify-content-center align-items-center">  
                 <div class="d-flex justify-content-center align-items-center about-title ">
-                    <h1> {{t('about.tools')}}</h1> 
+                    <h1> {{aboutObjectTransloco.tools}} </h1> 
                 </div>
                 <div class="swipper-about" *ngIf="logos.length > 0">
                     <app-swipper
                         [logos]="logos"></app-swipper>
                 </div>
             </div>
-        </div>
-    </ng-container>
-          
+        </div>    
+    </ng-template>
+              
 </div>

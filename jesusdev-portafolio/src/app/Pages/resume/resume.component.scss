@@ -79,3 +79,40 @@
 .fallback-no-pdf-plugin a {
   color: var(--color-principal);
 }
+
+.go-back{
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+
+.btn-bg-color{
+  background-color: var(--btn-cv-bg-color);
+}
+
+@media(max-width:749px){
+  .go-back{
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    width: max-content;
+  }
+}
+
+@media(min-width:750px) and (max-width: 1749px){
+  .go-back{
+    top: 25%;
+    left: 2%;
+    font-size: 17px;
+  }
+}
+
+
+@media(min-width:1750px){
+  .go-back{
+    top: 15%;
+    left: 15%;
+    font-size: 22px;
+  }
+}

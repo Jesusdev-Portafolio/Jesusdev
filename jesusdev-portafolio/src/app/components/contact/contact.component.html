@@ -4,6 +4,12 @@
     </div>
 </div>
 
+<ng-container *transloco="let t" >
+    <ngx-spinner size="medium" type="pacman"  [color]="spinnerColor" [bdColor]="spinnerBgColor" [name]="'sendingEmail'" >
+        <h3>{{t('spinnerEmail')}}</h3>
+    </ngx-spinner>
+</ng-container>
+
 <div class="container custom-height">
     <div class="row">
         <div class="col-12">
