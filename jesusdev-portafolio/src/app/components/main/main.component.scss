@@ -69,7 +69,33 @@
     font-weight:100;
 }
 
-@media(min-width:750px) and (max-width: 1750px){
+@media(min-width:750px) and (max-width:770px){
+    .my-img{
+        width:210px;
+    } 
+    .main-title{
+        font-size: 30px;
+    }
+
+    .main-title .typed-cursor{
+        font-size: 37px !important;
+    }
+    
+    .custom-width{
+        width: 395px;
+    }
+
+    .custom-height{
+        height: 145px;
+    }
+
+    .col-sm-12{
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+
+@media(min-width:771px) and (max-width: 1750px){
     .my-img{
         width:250px;
     } 
@@ -88,6 +114,10 @@
     .custom-height{
         height: 145px;
     }
+
+   
+
+  
 }
 
 @media(max-width:749px){
