@@ -13,68 +13,52 @@ body * {
    transition: all .3s linear;   
   }
 
-  *{ //esto para firefox porque las property no le gustan y tiene los colores pero no se hacen las transiciones de colores.
-    //las property para crome e IE porque las properties se pueden hacer transiciones de colores gradients
-    --myColor1Light: rgba(255,255,255);
-    --myColor2Light: rgba(33,150,243);
-    --myColor1Dark: rgba(65,65,65);
-    --myColor2Dark: rgba(29,242,114);
-  }
-
- @property --myColor1Light {
-    syntax: '<color>';
-    initial-value: rgba(255,255,255);
-    inherits: false;
-  }
-  
-  @property --myColor2Light {
-    syntax: '<color>';
-    initial-value: rgba(33, 150, 243);
-    inherits: false;
-  }
-
-  @property --myColor1Dark {
-    syntax: '<color>';
-    initial-value: rgba(65,65,65);
-    inherits: false;
-  }
-  
-  @property --myColor2Dark {
-    syntax: '<color>';
-    initial-value: rgba(29,242,114);
-    inherits: false;
-  }
-
-.background{
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    position: absolute;
-    z-index:-1;
-}
-
-.light .background{
-    --myColor1Dark: var(--myColor1Light);
-    --myColor2Dark: var(--myColor2Light);
-}
-
-
-.dark  .background{
-    --myColor1Light: var(--myColor1Dark);
-    --myColor2Light: var(--myColor2Dark);
-}
-
-
-// .light .background {
-//     background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
-//     transition: --myColor1Dark 1.2s, --myColor2Dark 1.2s;
+//   *{ //esto para firefox porque las property no le gustan y tiene los colores pero no se hacen las transiciones de colores.
+//     //las property para crome e IE porque las properties se pueden hacer transiciones de colores gradients
+//     --myColor1Light: rgba(255,255,255);
+//     --myColor2Light: rgba(33,150,243);
+//     --myColor1Dark: rgba(65,65,65);
+//     --myColor2Dark: rgba(29,242,114);
 //   }
 
-// .dark  .background {
-//     background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
-//     transition: --myColor1Light 1.2s, --myColor2Light 1.2s;
+//  @property --myColor1Light {
+//     syntax: '<color>';
+//     initial-value: rgba(255,255,255);
+//     inherits: false;
 //   }
+  
+//   @property --myColor2Light {
+//     syntax: '<color>';
+//     initial-value: rgba(33, 150, 243);
+//     inherits: false;
+//   }
+
+//   @property --myColor1Dark {
+//     syntax: '<color>';
+//     initial-value: rgba(65,65,65);
+//     inherits: false;
+//   }
+  
+//   @property --myColor2Dark {
+//     syntax: '<color>';
+//     initial-value: rgba(29,242,114);
+//     inherits: false;
+//   }
+
+// .background{
+   
+// }
+
+// .light .background{
+//     --myColor1Dark: var(--myColor1Light);
+//     --myColor2Dark: var(--myColor2Light);
+// }
+
+
+// .dark  .background{
+//     --myColor1Light: var(--myColor1Dark);
+//     --myColor2Light: var(--myColor2Dark);
+// }
 
 
 

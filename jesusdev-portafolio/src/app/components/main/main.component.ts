@@ -14,8 +14,8 @@ export class MainComponent implements OnInit {
    @ViewChild('backgroundThemeMain') backgroundThemeMain!: ElementRef;
    theme$ : Observable<Theme>;
 
-   private mainTextEs = ["<span class='color-secundario'>Soy</span> <span class='color-principal'>Jesus</span><span class='color-secundario'> y soy </span><span class='color-principal margin-second-line'>Desarrollador</span> <span class='color-secundario'>web</span>"];
-   private mainTextEn = ["<span class='color-secundario'>I'm</span> <span class='color-principal'>Jesus</span> <span class='color-secundario'>and I'm</span> <span class='color-principal margin-second-line'>a web</span> <span class='color-secundario'>Developer</span>"];
+   private mainTextEs = ["<span class='color-secundario'>Soy</span> <span class='color-principal'>Jesus</span><span class='color-secundario'> y soy<br></span><span class='color-principal margin-second-line'>Desarrollador</span> <span class='color-secundario'>web</span>"];
+   private mainTextEn = ["<span class='color-secundario'>I'm</span> <span class='color-principal'>Jesus</span> <span class='color-secundario'>and I'm<br></span> <span class='color-principal margin-second-line'>a web</span> <span class='color-secundario'>Developer</span>"];
 
   //esto es para cuando entra al componente
    mainText = this.transLocoService.getActiveLang() === 'es' ? this.mainTextEs : this.mainTextEn; 

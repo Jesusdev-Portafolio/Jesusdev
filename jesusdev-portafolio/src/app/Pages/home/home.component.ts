@@ -1,5 +1,6 @@
 import {Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,12 @@ import { TranslocoService } from '@ngneat/transloco';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( private translocoService : TranslocoService) { }
+  theme$;
+  constructor(private themeService: ThemeService) { }
 
 
   ngOnInit(): void {
+    this.theme$ = this.themeService.theme$;
   }
 
   

@@ -13,15 +13,15 @@
 }
 
 
-.light .background {
-  background: radial-gradient(var(--myColor2Dark) 1% , var(--myColor1Dark) 70% );
-  transition: --myColor1Dark .8s, --myColor2Dark .8s;
-}
+// .light .background {
+//   background: radial-gradient(var(--myColor2Dark) 1% , var(--myColor1Dark) 70% );
+//   transition: --myColor1Dark .8s, --myColor2Dark .8s;
+// }
 
-.dark  .background {
-  background: radial-gradient(var(--myColor2Light) 1%,var(--myColor1Light) 60%, var(--myColor1Light) 1% );
-  transition: --myColor1Light .8s, --myColor2Light .8s;
-}
+// .dark  .background {
+//   background: radial-gradient(var(--myColor2Light) 1%,var(--myColor1Light) 60%, var(--myColor1Light) 1% );
+//   transition: --myColor1Light .8s, --myColor2Light .8s;
+// }
 
 ////////////////////
 

@@ -12,7 +12,7 @@ export class ProyectService {
        name: "Informatic",
        description: "informaticDescription", //this is the transloco key so with this i change the info
        imgSource: "/assets/projects/infromatic-responsive-img.png",
-       link:"#",
+       link:"https://informatic-23659.web.app",
        githubLink:"https://github.com/Jesusdev-Portafolio/Informatic",
        features: ["html", "css", "typescript", "angular","rxjs", "c#", ".net core","entity framework", "redis", "postgresql", "firebase",]
     }

@@ -1,13 +1,13 @@
 //custom position of the gradient
-.light .background {
-    background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
-    transition: --myColor1Dark .8s, --myColor2Dark .8s;
-  }
+// .light .background {
+//     background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
+//     transition: --myColor1Dark .8s, --myColor2Dark .8s;
+//   }
 
-  .dark  .background {
-    background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
-    transition: --myColor1Light .8s, --myColor2Light .8s;
-  }
+//   .dark  .background {
+//     background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
+//     transition: --myColor1Light .8s, --myColor2Light .8s;
+//   }
 
   ///////////////////////////
 
@@ -92,20 +92,23 @@
 
 @media(max-width:749px){
     .my-img{
-        width: 150px;
+        width: 190px;
         margin-right: 0px;
-        margin-top: 40px;
+        margin-top: -90px;
+        border-radius: 20px;
     }
 
     .main-title{
-        font-size: 25px;
+        font-size: 26px;
+        padding-left: 10%;
     }
     .custom-width{
-        width: 320px;
+        width: 100vw;
+        max-width: 100%;
     }
 
     .custom-height{
-        height: 75px;
+        height: 0;
     }
 
     .img-container{
@@ -120,11 +123,20 @@
     }
 
     .margin-second-line{
-        margin-left: 40px !important;
+        margin-left: 0px !important;
     }
 
     .custom-margin{
-        margin-left: 20px;
+        margin-left: 0px;
+    }
+
+    .me-3{
+        margin-right: 0 !important;
+    }
+
+    .mt-2{
+        margin-top: 0px;
+        padding-top: 90px;
     }
 }
 

@@ -1,12 +1,12 @@
-.light .background {
-    background: linear-gradient(to bottom left, var(--myColor1Dark), 90%, var(--myColor2Dark));
-    transition: --myColor1Dark  .8s, --myColor2Dark  .8s;
-  }
+// .light .background {
+//     background: linear-gradient(to bottom left, var(--myColor1Dark), 90%, var(--myColor2Dark));
+//     transition: --myColor1Dark  .8s, --myColor2Dark  .8s;
+//   }
 
-  .dark  .background {
-    background: linear-gradient(to bottom left, var(--myColor1Light), 90%, var(--myColor2Light));
-    transition: --myColor1Light .8s, --myColor2Light  .8s;
-  }
+//   .dark  .background {
+//     background: linear-gradient(to bottom left, var(--myColor1Light), 90%, var(--myColor2Light));
+//     transition: --myColor1Light .8s, --myColor2Light  .8s;
+//   }
 
   .custom-height{
     height: 100vh;

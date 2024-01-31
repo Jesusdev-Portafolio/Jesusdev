@@ -1,37 +1,39 @@
 
  <app-nav-bar></app-nav-bar>
-<div>
+<div [class]="(theme$ | async).themeToAdd">
     <div
         spyTarget [spyTargetId]="'home'"
         id="{{'navigation.home' | transloco}}" 
-        class="normal-section"> 
+        class="section bg bg-bottom-right"> 
         <app-main></app-main>
     </div>
     
     <div
         spyTarget [spyTargetId]="'about'" 
-        id="{{'navigation.about' | transloco}}" class="normal-section">
+        id="{{'navigation.about' | transloco}}" 
+        class="section bg bg-top-right">
         <app-about></app-about>
     </div> 
 
-    <!-- esa clase esta para acomodar el color del backgroun con los certificados que es un contenido dinamico y con eso lo apaño :D -->
     <div  
         spyTarget [spyTargetId]="'studies'" 
-        id="{{'navigation.studies' | transloco}}" class="normal-section background-color-base"
+        id="{{'navigation.studies' | transloco}}" 
+        class="section bg bg-center"
          >    
         <app-certificates></app-certificates>
     </div>
     
     <div
         spyTarget [spyTargetId]="'projects'" 
-         id="{{'navigation.projects' | transloco}}" class="normal-section">
+         id="{{'navigation.projects' | transloco}}" 
+         class="section bg bg-bottom-left">
         <app-projects></app-projects>
-    </div>
-    
-   
+    </div> 
+     
     <div 
         spyTarget [spyTargetId]="'contact'" 
-        id="{{'navigation.contact' | transloco}}" class="normal-section">
+        id="{{'navigation.contact' | transloco}}" 
+        class="section bg bg-top-left">
         <app-contact></app-contact>
     </div>
 

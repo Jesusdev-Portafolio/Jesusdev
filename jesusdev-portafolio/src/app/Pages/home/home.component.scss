@@ -1,16 +1,125 @@
-.normal-section{
+.section{
     min-height: 100vh;
-    max-height: max-content;
     width: 100vw;
     max-width: 100%;
     padding: 0 !important;
-    margin-bottom: -1px;
+    overflow: auto;
 }
 
-.background-color-base{
-    background-color: var(--color-fondo);
-    z-index: -1;
+
+//----------- Backgrounds --------------- //
+
+
+  *{ //esto para firefox porque las property no le gustan y tiene los colores pero no se hacen las transiciones de colores.
+    //las property para crome e IE porque las properties se pueden hacer transiciones de colores gradients
+    --myColor1Light: rgba(255,255,255);
+    --myColor2Light: rgba(33,150,243);
+    --myColor1Dark: rgba(65,65,65);
+    --myColor2Dark: rgba(29,242,114);
+  }
+
+ @property --myColor1Light {
+    syntax: '<color>';
+    initial-value: rgba(255,255,255);
+    inherits: false;
+  }
+  
+  @property --myColor2Light {
+    syntax: '<color>';
+    initial-value: rgba(33, 150, 243);
+    inherits: false;
+  }
+
+  @property --myColor1Dark {
+    syntax: '<color>';
+    initial-value: rgba(65,65,65);
+    inherits: false;
+  }
+  
+  @property --myColor2Dark {
+    syntax: '<color>';
+    initial-value: rgba(29,242,114);
+    inherits: false;
+  }
+
+
+.light .bg{
+    --myColor1Dark: var(--myColor1Light);
+    --myColor2Dark: var(--myColor2Light);
 }
+
+
+.dark  .bg{
+    --myColor1Light: var(--myColor1Dark);
+    --myColor2Light: var(--myColor2Dark);
+}
+
+// bottom -right
+
+.light .bg-bottom-right{
+    background: linear-gradient(to bottom right, var(--myColor1Light), 90%, var(--myColor2Light));
+    transition: --myColor1Light .8s, --myColor2Light .8s;
+}
+
+.dark .bg-bottom-right{
+    background: linear-gradient(to bottom right, var(--myColor1Dark), 90%, var(--myColor2Dark));
+    transition: --myColor1Dark .8s, --myColor2Dark .8s;
+}
+
+//---------//
+// top - right //
+
+.light .bg-top-right{
+    background: linear-gradient(to top right, var(--myColor1Light), 90%, var(--myColor2Light));
+    transition: --myColor1Light .8s, --myColor2Light .8s;
+}
+
+.dark .bg-top-right{
+    background: linear-gradient(to top right, var(--myColor1Dark), 90%, var(--myColor2Dark));
+    transition: --myColor1Dark .8s, --myColor2Dark .8s;
+}
+
+//----------------//
+// bottom - left
+
+.light .bg-bottom-left{
+    background: linear-gradient(to bottom left, var(--myColor1Light), 90%, var(--myColor2Light));
+    transition: --myColor1Light .8s, --myColor2Light .8s;
+}
+
+.dark .bg-bottom-left{
+    background: linear-gradient(to bottom left, var(--myColor1Dark), 90%, var(--myColor2Dark));
+    transition: --myColor1Dark .8s, --myColor2Dark .8s;
+}
+
+//----------//
+// Top - left //
+
+.light .bg-top-left{
+    background: linear-gradient(to top left, var(--myColor1Light), 90%, var(--myColor2Light));
+    transition: --myColor1Light .8s, --myColor2Light .8s;
+}
+
+.dark .bg-top-left{
+    background: linear-gradient(to top left, var(--myColor1Dark), 90%, var(--myColor2Dark));
+    transition: --myColor1Dark .8s, --myColor2Dark .8s;
+}
+
+//--------------//
+// Center //
+
+.light .bg-center {
+  background: radial-gradient(var(--myColor2Dark) 1% , var(--myColor1Dark) 70% );
+  transition: --myColor1Dark .8s, --myColor2Dark .8s;
+}
+
+.dark  .bg-center {
+  background: radial-gradient(var(--myColor2Light) 1%,var(--myColor1Light) 60%, var(--myColor1Light) 1% );
+  transition: --myColor1Light .8s, --myColor2Light .8s;
+}
+
+
+// ------------------------------------- //
 
 
 
