@@ -1,11 +1,10 @@
 {
     "main": {
-        "downloadCvBtn" : "Descargar CV",
-        "contactBtn" : "Contáctame"
+        "downloadCvBtn" : "Descargar CV"
     },
     "navBar": {
         "home": "Inicio",
-        "about": "Sobre mi",
+        "about": "Sobre mí",
         "projects": "Proyectos",
         "studies": "Estudios",
         "contact": "Contacto"

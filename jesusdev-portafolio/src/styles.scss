@@ -246,13 +246,13 @@ ngx-spinner{
 @media(min-width:1751px){
   
     .typed-cursor{
-        font-size: 55px !important;
+        font-size: 50px !important;
     }
 }
 
 @media(min-width:751px) and (max-width:1750px){
     .typed-cursor{
-        font-size: 47px !important;
+        font-size: 40px !important;
     } 
 }
 
@@ -263,7 +263,7 @@ ngx-spinner{
     }
 
     .typed-cursor{
-        font-size: 25px !important;
+        font-size: 24px !important;
     }
 }
 
@@ -289,6 +289,7 @@ ngx-spinner{
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scroll-bar-btn);
 }
+
 
 
 

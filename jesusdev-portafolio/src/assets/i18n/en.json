@@ -1,7 +1,6 @@
 {
     "main": {
-        "downloadCvBtn" : "Download CV",
-        "contactBtn" : "Contac Me"
+        "downloadCvBtn" : "Download CV"
     },
     "navBar": {
         "home": "Welcome",

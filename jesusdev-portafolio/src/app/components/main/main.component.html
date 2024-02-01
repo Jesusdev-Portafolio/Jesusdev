@@ -23,13 +23,20 @@
                             [typeSpeed]="45"
                             (completed)="showButtons = true"
                         >
-                        <div class="main-title color-principal me-3">> <span class="typing"></span></div>
+                        <div class="main-title color-principal center-text me-3">
+                            <div class="mobile-text-fit">
+                                > 
+                                <span class="typing"></span>
+                            </div>
+                        </div>
                       </ngx-typed-js>
 
                     </div>
-                    <div [ngClass]="{'oculto': !showButtons, 'visible': showButtons}" class="d-flex justify-content-center text-center mt-2">
+                    <div [ngClass]="{'oculto': !showButtons, 'visible': showButtons}" class="d-flex justify-content-center text-center mt-2 btn-fit">
                         <button routerLink="cv" class="btn btn-primary mx-2 btn-principal"> {{t('main.downloadCvBtn')}}</button>
-                        <a [href]="'#'+t('navigation.contact')" class="btn btn-success mx-2 btn-secundario">{{t('main.contactBtn')}}</a>
+                        <a href="https://www.linkedin.com/in/jesus-nogueragarcia" target="_blank" class="btn btn-success mx-2 btn-secundario btn-width">
+                            LinkedIn 
+                        </a>
                     </div>
                 </div>
                 

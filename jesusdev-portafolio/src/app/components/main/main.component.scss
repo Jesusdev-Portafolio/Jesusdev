@@ -60,13 +60,26 @@
 }
 
 .main-title{
-    font-size: 55px;
+    font-size: 50px;
     font-family: monospace;
     font-weight: 700;
 }
 
 .main-title .typed-cursor{
     font-weight:100;
+}
+
+.btn-fit{
+    margin-left: -60px;
+}
+
+.btn-width{
+    min-width: 100px;
+}
+
+.btn-width i{
+    font-size: 20px;
+    color: var(--color-fondo);
 }
 
 @media(min-width:750px) and (max-width:770px){
@@ -78,7 +91,7 @@
     }
 
     .main-title .typed-cursor{
-        font-size: 37px !important;
+        font-size: 32px !important;
     }
     
     .custom-width{
@@ -95,42 +108,52 @@
     }
 }
 
+
+@media(min-width:1751px){
+    .my-img{
+        display: relative;
+        left: 7%;
+    }
+    .custom-width{
+        padding-left: 5%;
+    }
+}
+
 @media(min-width:771px) and (max-width: 1750px){
     .my-img{
-        width:250px;
+        width:240px;
+        position: relative;
+        left: 10%;
     } 
     .main-title{
-        font-size: 47px;
+        font-size: 40px;
     }
 
-    .main-title .typed-cursor{
-        font-size: 47px !important;
-    }
     
     .custom-width{
         width: 545px;
+        padding-left: 5%;
     }
 
     .custom-height{
         height: 145px;
     }
-
-   
-
-  
+    .btn-fit{
+        margin-left: -80px;
+    }
 }
 
 @media(max-width:749px){
     .my-img{
         width: 190px;
         margin-right: 0px;
-        margin-top: -90px;
+        margin-top: -40px;
         border-radius: 20px;
     }
 
     .main-title{
-        font-size: 26px;
-        padding-left: 10%;
+        font-size: 24px;
+        margin: auto;
     }
     .custom-width{
         width: 100vw;
@@ -167,6 +190,20 @@
     .mt-2{
         margin-top: 0px;
         padding-top: 90px;
+    }
+
+    .btn-fit{
+        margin-left: 0px;
+    }
+
+    .mobile-text-fit{
+        width: 300px;
+        margin-left: 5px;
+    }
+
+    .center-text{
+        display: flex;
+        justify-content: center;
     }
 }
 
