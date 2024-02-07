@@ -26,10 +26,9 @@
 ////////////////////
 
 .custom-height{
-  min-height: 100vh;
-  max-height: fit-content;
-  
+  min-height: 100vh;  
 }
+
 .certificates{
   display: flex;
   align-items: center;
@@ -41,10 +40,12 @@
 
 @media(max-width: 749px){
   .certificates{
-    margin-top: -80px;
+    //margin-top: -80px;
+    margin-top: 0px;
     margin-left: 0;
     width: 100vw;
     max-width: 100%;
+    margin-bottom: 50px;
   }
  
 }

@@ -12,7 +12,7 @@
 
   /* sizing section */
 .custom-height{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .row{
@@ -112,6 +112,10 @@ button{
 
   .text-area-container{
     width: 340px;
+  }
+
+  .form-container{
+    margin-bottom: 50px;
   }
 
 

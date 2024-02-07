@@ -1,6 +1,6 @@
 
  <app-nav-bar></app-nav-bar>
-<div [class]="(theme$ | async).themeToAdd">
+<div [class]="(theme$ | async).themeToAdd +' contenedor'">
     <div
         spyTarget [spyTargetId]="'home'"
         id="{{'navigation.home' | transloco}}" 

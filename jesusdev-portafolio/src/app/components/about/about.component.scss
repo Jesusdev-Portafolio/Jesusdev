@@ -10,7 +10,7 @@
 //   }
 
 .my-container-height{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .swiper-decoration{
@@ -19,7 +19,8 @@
 
 .about-title{
     position: relative;
-    top: 25px;
+    //top: 25px;
+    top: -5px;
     color: var(--color-secundario);
 }
 
@@ -53,7 +54,7 @@
 
 @media(max-width:750px){
     .swipper-about{
-        top: -70px;
+        top: -25px;
     }
 
     .about-title{
@@ -63,7 +64,9 @@
         font-size: 40px;
     }
 
-    .about-text{
-        margin-top: 70px
+    .f-column-mobile{
+        flex-direction: column;
     }
+
+  
 }
